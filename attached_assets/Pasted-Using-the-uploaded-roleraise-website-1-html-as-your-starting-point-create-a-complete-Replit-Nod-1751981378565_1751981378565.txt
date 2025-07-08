@@ -1,0 +1,52 @@
+Using the uploaded `roleraise-website (1).html` as your starting point, create a complete Replit Node.js/Express project that:
+
+1. **Imports & Adapts All Content**  
+   - Pull in every section, image and text (hero, features, pricing, assessment form, testimonials placeholder, “Book a Call” area, footer, navigation) from the provided HTML into `public/index.html`.  
+   - Organize markup for a responsive, single‐page layout.
+
+2. **Jolt.io–Inspired Design**  
+   - Create `public/css/styles.css` with a bold, gradient-driven palette, modern sans-serif fonts, crisp buttons, and grid/flex layouts for features and testimonials.  
+   - Ensure the site looks polished on mobile and desktop.
+
+3. **Assessment Form → Google Sheets**  
+   - In `server.js`, implement a `POST /api/assessment` endpoint that reads JSON form data and appends a row to a Google Sheet via the Google Sheets API (using a service account).  
+   - Include comments explaining how to set up the service account JSON in Replit Secrets and the sheet ID.
+
+4. **Book a Call → Calendly Widget**  
+   - Embed the Calendly inline scheduling widget in the “Book a Call” section of `index.html`.  
+   - Add comments showing where to paste the user’s Calendly link/UUID to swap in their own calendar.
+
+5. **Dynamic Testimonials & Mentors**  
+   - Seed `testimonials.json` and `mentors.json` with placeholder entries (name, role/title, company, salary change or bio, `avatarUrl`).  
+   - In `server.js`, on startup load these JSON files into memory; expose `GET /api/testimonials` and `GET /api/mentors`.  
+   - In `public/js/main.js`, fetch and render both lists dynamically in styled grids.
+
+6. **PayPal Purchase Flow**  
+   - Use `@paypal/checkout-server-sdk` in sandbox mode.  
+   - Implement `POST /api/paypal/create-order` (body: `{ amount }`) to create an order, and `POST /api/paypal/capture-order` (body: `{ orderID }`) to capture payment.  
+   - In `main.js`, render PayPal Buttons with alerts on success.
+
+7. **Project Structure**  
+/
+├── public/
+│ ├── index.html
+│ ├── css/styles.css
+│ └── js/main.js
+├── server.js
+├── testimonials.json
+├── mentors.json
+├── package.json # express, body-parser, googleapis, @paypal/checkout-server-sdk
+└── .replit # run = "node server.js"
+
+vbnet
+Copy
+Edit
+
+8. **Comments & Setup Guidance**  
+- In each file, include clear comments for:  
+  • Where to drop in Google service‐account credentials  
+  • Where to swap in Calendly link/UUID  
+  • How to set your PayPal sandbox client ID/secret in Replit Secrets  
+  • How and where to add avatar images (public/images or external URLs)
+
+Output each file’s full contents in separate markdown code blocks so I can paste them directly into my Replit project. Thank you!

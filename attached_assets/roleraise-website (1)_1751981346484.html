@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoleRaise - Land Your $200K+ Tech Role in 90 Days | Guaranteed</title>
+    <meta name="description" content="Join 500+ professionals who've 2X'd their salaries. Get 1-on-1 mentorship from executives at Google, Meta, Amazon & 100+ top companies. 92% interview success rate.">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        :root {
+            /* Jolt.io Inspired Color Palette */
+            --primary: #5046E5;
+            --primary-dark: #4338CA;
+            --primary-light: #6366F1;
+            
+            /* Vibrant Card Colors */
+            --mint: #6EE7B7;
+            --purple: #A78BFA;
+            --coral: #FCA5A5;
+            --pink: #F9A8D4;
+            --beige: #FDE68A;
+            --sky: #93C5FD;
+            --orange: #FED7AA;
+            --green: #86EFAC;
+            
+            /* Neutrals */
+            --black: #000000;
+            --gray-900: #111827;
+            --gray-800: #1F2937;
+            --gray-700: #374151;
+            --gray-600: #4B5563;
+            --gray-500: #6B7280;
+            --gray-400: #9CA3AF;
+            --gray-300: #D1D5DB;
+            --gray-200: #E5E7EB;
+            --gray-100: #F3F4F6;
+            --gray-50: #F9FAFB;
+            --white: #FFFFFF;
+            
+            /* Success & Danger */
+            --success: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            color: var(--black);
+        }
+
+        h1 { font-size: clamp(32px, 5vw, 64px); }
+        h2 { font-size: clamp(24px, 4vw, 48px); }
+        h3 { font-size: clamp(20px, 3vw, 32px); }
+        h4 { font-size: clamp(18px, 2.5vw, 24px); }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--black);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--black);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gray-700);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: var(--white);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--beige);
+            color: var(--black);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            color: var(--black);
+            margin-bottom: 16px;
+            font-weight: 900;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--gray-600);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-subtitle strong {
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray-600);
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gray-700);
+            border: 2px solid var(--gray-300);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gray-400);
+            background: var(--gray-50);
+        }
+
+        .trust-indicators {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-icon {
+            color: var(--success);
+        }
+
+        /* Form Container */
+        .form-container {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--gray-200);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-title {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            color: var(--gray-600);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 14px;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            background: var(--white);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(80, 70, 229, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 32px;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green);
+            color: var(--black);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--purple);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--white);
+            margin: 0 auto 24px;
+        }
+
+        .process-step h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+
+        .process-step p {
+            color: var(--gray-600);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        /* Career Transformation */
+        .transformation {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .before-card {
+            background: var(--coral);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .after-card {
+            background: var(--mint);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .vs-arrow {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .transformation-stats {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .transformation-stats-card {
+            background: var(--beige);
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Common Questions */
+        .questions {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .question-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .question-answer {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* Risk Reversal */
+        .risk-reversal {
+            background: var(--primary);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .risk-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .risk-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .risk-item h3 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .risk-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+        }
+
+        .risk-note {
+            text-align: center;
+            margin-top: 40px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Why Not Courses */
+        .why-not-courses {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .comparison-box {
+            background: var(--pink);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        /* Career Tracks */
+        .career-tracks {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .track-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+        }
+
+        .track-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .track-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .track-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+
+        .track-card p {
+            color: var(--gray-600);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .track-salary {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .pricing-toggle {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .toggle-container {
+            display: inline-flex;
+            background: var(--gray-100);
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .toggle-option {
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--gray-600);
+        }
+
+        .toggle-option.active {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--black);
+        }
+
+        .pricing-description {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        .price-container {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .price-period {
+            font-size: 16px;
+            color: var(--gray-600);
+            font-weight: 600;
+        }
+
+        .price-save {
+            font-size: 14px;
+            color: var(--success);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            color: var(--gray-700);
+            font-weight: 500;
+            position: relative;
+            padding-left: 32px;
+            font-size: 15px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .story-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .story-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+
+        .story-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .story-role {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+
+        .story-salary {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--success);
+            margin-bottom: 16px;
+        }
+
+        .story-company {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Mentors Section */
+        .mentors {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .mentors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .mentor-card {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .mentor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mentor-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        .mentor-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .mentor-title {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 8px;
+        }
+
+        .mentor-company {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--black);
+            color: white;
+            padding: 60px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 28px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--gray-400);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gray-400);
+            font-size: 14px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: 32px;
+            text-align: center;
+            color: var(--gray-400);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-800);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tracks-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mentors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .comparison-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .vs-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .risk-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tracks-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mentors-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">RoleRaise</a>
+                <ul class="nav-links">
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#success-stories">Success Stories</a></li>
+                    <li><a href="#mentors">Mentors</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#assessment" class="nav-cta">Get Started Free →</a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        ⚡ 500+ Tech Professionals Hired This Year
+                    </div>
+                    <h1 class="hero-title">Land Your $200K+ Tech Role in 90 Days</h1>
+                    <p class="hero-subtitle">
+                        <strong>We are not selling any course — we're your career transformation partners.</strong>
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">92%</span>
+                            <span class="stat-label">Interview Success Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$34K</span>
+                            <span class="stat-label">Avg. Negotiation Boost</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6 Weeks</span>
+                            <span class="stat-label">Average Time to Offer</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="#assessment" class="btn btn-primary">
+                            🚀 Book Free Strategy Call
+                        </a>
+                        <a href="#success-stories" class="btn btn-secondary">
+                            📊 See Success Stories
+                        </a>
+                    </div>
+                    
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>No upfront payment</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>90-day guarantee</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>FAANG mentors</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Assessment Form -->
+                <div class="form-container" id="assessment">
+                    <div class="form-header">
+                        <h3 class="form-title">Get Your Free Career Assessment</h3>
+                    </div>
+                    
+                    <form id="assessmentForm">
+                        <div class="form-group">
+                            <label class="form-label">1. What's your name?</label>
+                            <input type="text" class="form-input" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">2. Work email address</label>
+                            <input type="email" class="form-input" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">3. What's your target role?</label>
+                            <select class="form-select" name="role" required>
+                                <option value="">Select your target role</option>
+                                <option value="software-engineer">Software Engineer</option>
+                                <option value="product-manager">Product Manager</option>
+                                <option value="data-scientist">Data Scientist</option>
+                                <option value="engineering-manager">Engineering Manager</option>
+                                <option value="product-designer">Product Designer</option>
+                                <option value="data-engineer">Data Engineer</option>
+                                <option value="marketing-manager">Marketing Manager</option>
+                                <option value="sales-engineer">Sales Engineer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">4. Current location</label>
+                            <select class="form-select" name="location" required>
+                                <option value="">Select your location</option>
+                                <option value="us">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="australia">Australia</option>
+                                <option value="germany">Germany</option>
+                                <option value="netherlands">Netherlands</option>
+                                <option value="brazil">Brazil</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">5. Current salary (USD)</label>
+                            <select class="form-select" name="salary" required>
+                                <option value="">Select salary range</option>
+                                <option value="under-50k">Under $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="100k-150k">$100,000 - $150,000</option>
+                                <option value="150k-200k">$150,000 - $200,000</option>
+                                <option value="200k-300k">$200,000 - $300,000</option>
+                                <option value="over-300k">Over $300,000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">6. Years of experience</label>
+                            <select class="form-select" name="experience" required>
+                                <option value="">Select experience level</option>
+                                <option value="0-2">0-2 years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="6-10">6-10 years</option>
+                                <option value="10+">10+ years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">7. Upload your resume (optional)</label>
+                            <input type="file" class="form-input" name="resume" accept=".pdf,.doc,.docx">
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Get My Free Assessment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <span>🛡️</span>
+                <span>100% Money-Back Guarantee</span>
+            </div>
+            <div class="trust-badge">
+                <span>🔒</span>
+                <span>Bank-Level Security</span>
+            </div>
+            <div class="trust-badge">
+                <span>⚡</span>
+                <span>24/7 Support</span>
+            </div>
+            <div class="trust-badge">
+                <span>📞</span>
+                <span>No Payment to Book Call</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🛠️ How It Works</div>
+                <h2 class="section-title">Your 90-day journey to your dream role</h2>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Personal Strategy Session</h3>
+                    <p>1:1 call with your assigned FAANG mentor to assess your profile, identify gaps, and create a custom roadmap.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Direct Referrals & Applications</h3>
+                    <p>We handle applications and give you personal referrals to hiring managers.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Interview Mastery Coaching</h3>
+                    <p>1:1 mock interviews with engineers who've designed the real process.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Offer Negotiation & Closing</h3>
+                    <p>Experts negotiate your compensation—average increase $34K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Transformation -->
+    <section class="transformation">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🔄 Career Transformation</div>
+                <h2 class="section-title">From Struggling Job Seeker to Top Tech Talent</h2>
+                <p class="section-subtitle">(in just 90 days)</p>
+            </div>
+            
+            <div class="comparison-container">
+                <div class="before-card">
+                    <h3 style="font-size: 24px; font-weight: 800; color: var(--black); margin-bottom: 20px;">BEFORE RoleRaise</h3>
+                    <p style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Avg. Salary: $85K</p>
+                    <ul style="list-style: none; text-align: left;">
+                        <li style="padding: 8px 0;">❌ Sending 100+ apps with no response</li>
+                        <li style="padding: 8px 0;">❌ Rejected after first-round interviews</li>
+                        <li style="padding: 8px 0;">❌ No connections at target companies</li>
+                        <li style="padding: 8px 0;">❌ Accepting lowball offers</li>
+                        <li style="padding: 8px 0;">❌ Feeling stuck, no negotiation leverage</li>
+                    </ul>
+                </div>
+                
+                <div class="vs-arrow">→</div>
+                
+                <div class="after-card">
+                    <h3 style="font-size: 24px; font-weight: 800; color: var(--black); margin-bottom: 20px;">AFTER RoleRaise</h3>
+                    <p style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Avg. Salary: $185K+</p>
+                    <ul style="list-style: none; text-align: left;">
+                        <li style="padding: 8px 0;">✅ Direct referrals from FAANG engineers</li>
+                        <li style="padding: 8px 0;">✅ Insider interview prep</li>
+                        <li style="padding: 8px 0;">✅ Intros to hiring managers</li>
+                        <li style="padding: 8px 0;">✅ Multiple competing offers</li>
+                        <li style="padding: 8px 0;">✅ Expert negotiation = +$34K avg.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="transformation-stats">
+                <div class="transformation-stats-card">
+                    <div style="font-size: 20px; font-weight: 800; color: var(--black); margin-bottom: 8px;">📈 Average Transformation</div>
+                    <div style="font-size: 18px; color: var(--gray-800);">$85K → $185K = <strong>+$100K per year</strong></div>
+                    <div style="font-size: 16px; color: var(--gray-700); margin-top: 8px;">That's <strong>$500K+</strong> over 5 years!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Questions -->
+    <section class="questions">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">❓ Common Questions</div>
+                <h2 class="section-title">But what if you're thinking...</h2>
+            </div>
+            
+            <div class="questions-grid">
+                <div class="question-card">
+                    <div class="question-title">"I don't have enough experience for FAANG"</div>
+                    <div class="question-answer">
+                        <strong>Clients range 2–15+ yrs.</strong> We place both juniors and principals.
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-title">"This seems expensive"</div>
+                    <div class="question-answer">
+                        <strong>Cheapest $34K raise you'll ever get;</strong> money-back guarantee.
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-title">"No time for coaching?"</div>
+                    <div class="question-answer">
+                        <strong>3–4 hrs/week replaces 20+ hrs of blind apps;</strong> 75% faster results.
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-title">"What if I don't get interviews?"</div>
+                    <div class="question-answer">
+                        <strong>At least 3 top-tier interviews in 90 days</strong> or 100% refund.
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-title">"Does this work outside the US?"</div>
+                    <div class="question-answer">
+                        <strong>Yes—US, CA, UK, AU, DE, BR;</strong> global FAANG network.
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-title">"Can't I learn this on YouTube?"</div>
+                    <div class="question-answer">
+                        <strong>YouTube can't refer you to a Principal Engineer</strong> or negotiate $240K.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zero Risk Guarantee -->
+    <section class="risk-reversal">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" style="background: rgba(255, 255, 255, 0.2); color: white;">🛡️ Zero Risk Guarantee</div>
+                <h2 class="section-title" style="color: white;">We take all the risk, you get all the reward</h2>
+            </div>
+            
+            <div class="risk-grid">
+                <div class="risk-item">
+                    <div class="risk-icon">🎯</div>
+                    <h3>Interview Guarantee</h3>
+                    <p>3 interviews in 90 days or full refund + free support</p>
+                </div>
+                
+                <div class="risk-item">
+                    <div class="risk-icon">💰</div>
+                    <h3>Salary Guarantee</h3>
+                    <p>+$10K min. or refund difference + free work until it does</p>
+                </div>
+                
+                <div class="risk-item">
+                    <div class="risk-icon">🔄</div>
+                    <h3>Lifetime Support</h3>
+                    <p>Extend indefinitely until you land</p>
+                </div>
+            </div>
+            
+            <div class="risk-note">
+                <p style="font-size: 18px; font-weight: 600;">
+                    <strong>Think About It:</strong> Investing $2,991 now vs. staying $50K/year under-paid...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Not Courses -->
+    <section class="why-not-courses">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">❌ Why Courses Don't Work</div>
+                <h2 class="section-title">We're not selling you another course</h2>
+            </div>
+            
+            <div class="comparison-box">
+                <p style="font-size: 18px; line-height: 1.8; color: var(--black);">
+                    You can find courses on YouTube and Udemy. What you can't find is <strong>direct access to hiring managers at Google, Meta, and Amazon</strong> who will personally refer you and coach you through the process.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Tracks -->
+    <section class="career-tracks">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🎯 Specialization Tracks</div>
+                <h2 class="section-title">We specialize in high-demand tech roles</h2>
+                <p class="section-subtitle">Our mentors have deep, track-specific expertise</p>
+            </div>
+            
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <div class="track-icon">💻</div>
+                    <h3>Software Engineering</h3>
+                    <p>Frontend, Backend, Full-Stack, Mobile</p>
+                    <div class="track-salary">Avg. $180K+</div>
+                </div>
+                
+                <div class="track-card">
+                    <div class="track-icon">📊</div>
+                    <h3>Data & Analytics</h3>
+                    <p>Data Sci, ML Eng, Analytics</p>
+                    <div class="track-salary">Avg. $170K+</div>
+                </div>
+                
+                <div class="track-card">
+                    <div class="track-icon">🚀</div>
+                    <h3>Product Management</h3>
+                    <p>PM, Sr PM, Group PM, Dir</p>
+                    <div class="track-salary">Avg. $190K+</div>
+                </div>
+                
+                <div class="track-card">
+                    <div class="track-icon">🎨</div>
+                    <h3>Design & UX</h3>
+                    <p>Product Designer, UX Researcher</p>
+                    <div class="track-salary">Avg. $160K+</div>
+                </div>
+                
+                <div class="track-card">
+                    <div class="track-icon">📈</div>
+                    <h3>Growth & Marketing</h3>
+                    <p>Growth PM, Marketing Mgr</p>
+                    <div class="track-salary">Avg. $150K+</div>
+                </div>
+                
+                <div class="track-card">
+                    <div class="track-icon">⚙️</div>
+                    <h3>Engineering Leadership</h3>
+                    <p>Tech Lead, Eng Manager</p>
+                    <div class="track-salary">Avg. $220K+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💎 Choose Your Program</div>
+                <h2 class="section-title">All programs offer 90-day guarantee and FAANG mentorship</h2>
+            </div>
+            
+            <div class="pricing-toggle">
+                <div class="toggle-container">
+                    <div class="toggle-option active" onclick="togglePricing('monthly')">Monthly</div>
+                    <div class="toggle-option" onclick="togglePricing('one-time')">One-Time</div>
+                </div>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Dream Job Accelerator -->
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Dream Job Accelerator</h3>
+                    </div>
+                    <div class="price-container">
+                        <div class="price" id="price1">$997<span class="price-period">/mo</span></div>
+                        <div class="price-save" id="save1" style="display: none;">Save 15%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>FAANG mentor assigned to you</li>
+                        <li>5 guaranteed referrals</li>
+                        <li>Unlimited coaching sessions</li>
+                        <li>600+ applications handled</li>
+                        <li>Expert salary negotiation</li>
+                        <li>LinkedIn & resume optimization</li>
+                        <li>24/7 Slack support</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Elite Executive Program -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Elite Executive Program</h3>
+                    </div>
+                    <div class="price-container">
+                        <div class="price" id="price2">$1,497<span class="price-period">/mo</span></div>
+                        <div class="price-save" id="save2" style="display: none;">Save 20%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Dream Job</li>
+                        <li>1:1 mentorship</li>
+                        <li>Technical training</li>
+                        <li>Career strategist</li>
+                        <li>10 C-suite referrals</li>
+                        <li>Exec presence & board prep</li>
+                        <li>Equity negotiation</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Go Elite
+                    </button>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 32px;">
+                <!-- Interview Mastery -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Interview Mastery</h3>
+                    </div>
+                    <div class="price-container">
+                        <div class="price" id="price3">$497<span class="price-period">/mo</span></div>
+                        <div class="price-save" id="save3" style="display: none;">Save 15%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>1:1 mentorship</li>
+                        <li>Technical training workshops</li>
+                        <li>Resume & LinkedIn optimization</li>
+                        <li>Mock interviews</li>
+                        <li>Salary negotiation guide</li>
+                        <li>Job search strategy</li>
+                        <li>Community access</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Start Mastery
+                    </button>
+                </div>
+                
+                <!-- Custom Enterprise -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Custom Enterprise</h3>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">Custom<span class="price-period"> pricing</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Fully tailored strategy</li>
+                        <li>Unlimited referrals</li>
+                        <li>Dedicated manager</li>
+                        <li>Custom milestones</li>
+                        <li>Enterprise-level support</li>
+                        <li>Success guarantee</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories" id="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🏆 Success Stories</div>
+                <h2 class="section-title">Real people, real transformations</h2>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-avatar">SC</div>
+                    <h4 class="story-name">Sarah Chen</h4>
+                    <p class="story-role">Senior PM → Staff PM</p>
+                    <p class="story-salary">$120K → $285K</p>
+                    <span class="story-company">Google</span>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">MR</div>
+                    <h4 class="story-name">Michael Rodriguez</h4>
+                    <p class="story-role">SWE II → Senior SWE</p>
+                    <p class="story-salary">$95K → $220K</p>
+                    <span class="story-company">Meta</span>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">AP</div>
+                    <h4 class="story-name">Aisha Patel</h4>
+                    <p class="story-role">Data Analyst → Data Scientist</p>
+                    <p class="story-salary">$85K → $195K</p>
+                    <span class="story-company">Amazon</span>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">DK</div>
+                    <h4 class="story-name">David Kim</h4>
+                    <p class="story-role">Designer → Senior Designer</p>
+                    <p class="story-salary">$90K → $180K</p>
+                    <span class="story-company">Apple</span>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">LW</div>
+                    <h4 class="story-name">Lisa Wang</h4>
+                    <p class="story-role">PM → Senior PM</p>
+                    <p class="story-salary">$110K → $245K</p>
+                    <span class="story-company">Netflix</span>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">JW</div>
+                    <h4 class="story-name">James Wilson</h4>
+                    <p class="story-role">Engineer → Tech Lead</p>
+                    <p class="story-salary">$130K → $310K</p>
+                    <span class="story-company">Microsoft</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section class="mentors" id="mentors">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">👥 World-Class Mentors</div>
+                <h2 class="section-title">Learn from the best in the industry</h2>
+            </div>
+            
+            <div class="mentors-grid">
+                <div class="mentor-card">
+                    <div class="mentor-avatar">AC</div>
+                    <h4 class="mentor-name">Alex Chen</h4>
+                    <p class="mentor-title">Ex-Principal Engineer</p>
+                    <p class="mentor-company">Google</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">SR</div>
+                    <h4 class="mentor-name">Sarah Rodriguez</h4>
+                    <p class="mentor-title">Ex-Senior PM</p>
+                    <p class="mentor-company">Meta</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">MP</div>
+                    <h4 class="mentor-name">Michael Park</h4>
+                    <p class="mentor-title">Ex-ML Lead</p>
+                    <p class="mentor-company">Amazon</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">LT</div>
+                    <h4 class="mentor-name">Lisa Thompson</h4>
+                    <p class="mentor-title">Ex-Design Director</p>
+                    <p class="mentor-company">Apple</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">JL</div>
+                    <h4 class="mentor-name">John Lee</h4>
+                    <p class="mentor-title">Ex-VP Engineering</p>
+                    <p class="mentor-company">Netflix</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">EG</div>
+                    <h4 class="mentor-name">Emma Garcia</h4>
+                    <p class="mentor-title">Ex-Growth Lead</p>
+                    <p class="mentor-company">Uber</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">RK</div>
+                    <h4 class="mentor-name">Ryan Kumar</h4>
+                    <p class="mentor-title">Ex-Staff Engineer</p>
+                    <p class="mentor-company">Microsoft</p>
+                </div>
+                
+                <div class="mentor-card">
+                    <div class="mentor-avatar">NP</div>
+                    <h4 class="mentor-name">Nina Patel</h4>
+                    <p class="mentor-title">Ex-Data Science Lead</p>
+                    <p class="mentor-company">Airbnb</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to transform your career?</h2>
+            <p>Join 500+ professionals who've landed their dream roles with RoleRaise.</p>
+            
+            <div class="cta-buttons">
+                <a href="#assessment" class="btn-white">
+                    🚀 Get Started Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>RoleRaise</h3>
+                    <p>Your career transformation partner. Land your dream tech role in 90 days, guaranteed.</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span>📧</span>
+                            <span>hello@roleraise.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span>📞</span>
+                            <span>1-800-ROLE-RAISE</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span>📍</span>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#programs">Dream Job Accelerator</a></li>
+                        <li><a href="#programs">Elite Executive</a></li>
+                        <li><a href="#programs">Interview Mastery</a></li>
+                        <li><a href="#programs">Custom Enterprise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#success-stories">Success Stories</a></li>
+                        <li><a href="#mentors">Our Mentors</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 RoleRaise Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💼</a>
+                    <a href="#" class="social-link">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We\'ll contact you within 24 hours to schedule your free career assessment.');
+            this.reset();
+        });
+
+        // Pricing toggle
+        function togglePricing(type) {
+            const monthly = type === 'monthly';
+            
+            // Update toggle
+            document.querySelectorAll('.toggle-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update prices
+            if (monthly) {
+                document.getElementById('price1').innerHTML = '$997<span class="price-period">/mo</span>';
+                document.getElementById('price2').innerHTML = '$1,497<span class="price-period">/mo</span>';
+                document.getElementById('price3').innerHTML = '$497<span class="price-period">/mo</span>';
+                document.getElementById('save1').style.display = 'none';
+                document.getElementById('save2').style.display = 'none';
+                document.getElementById('save3').style.display = 'none';
+            } else {
+                document.getElementById('price1').innerHTML = '$5,997<span class="price-period"> one-time</span>';
+                document.getElementById('price2').innerHTML = '$8,997<span class="price-period"> one-time</span>';
+                document.getElementById('price3').innerHTML = '$2,997<span class="price-period"> one-time</span>';
+                document.getElementById('save1').style.display = 'block';
+                document.getElementById('save2').style.display = 'block';
+                document.getElementById('save3').style.display = 'block';
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            // Implementation for mobile menu
+        }
+
+        // Initialize animations
+        if (window.gsap && window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate cards on scroll
+            gsap.utils.toArray('.track-card, .story-card, .mentor-card, .process-step').forEach(card => {
+                gsap.fromTo(card, 
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 80%'
+                        }
+                    }
+                );
+            });
+        }
+    </script>
+</body>
+</html>
