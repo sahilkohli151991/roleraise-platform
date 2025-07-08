@@ -19,8 +19,8 @@
   --secondary-foreground: hsl(210, 40%, 20%);
   --accent: hsl(210, 20%, 60%);
   --accent-foreground: hsl(0, 0%, 100%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --destructive: hsl(210, 20%, 40%);
+  --destructive-foreground: hsl(0, 0%, 100%);
   --ring: hsl(210, 40%, 20%);
   --radius: 0.5rem;
 
@@ -228,27 +228,27 @@
   }
   
   .bg-sky {
-    background-color: hsl(213, 74%, 78%);
+    background-color: hsl(210, 25%, 50%);
   }
   
   .bg-orange {
-    background-color: hsl(26, 89%, 80%);
+    background-color: hsl(210, 15%, 50%);
   }
   
   .bg-green {
-    background-color: hsl(142, 76%, 73%);
+    background-color: hsl(210, 20%, 45%);
   }
   
   .text-primary {
-    color: hsl(246, 71%, 58%);
+    color: hsl(210, 40%, 20%);
   }
   
   .text-primary-dark {
-    color: hsl(249, 62%, 52%);
+    color: hsl(210, 50%, 15%);
   }
   
   .hover\\:bg-primary-dark:hover {
-    background-color: hsl(249, 62%, 52%);
+    background-color: hsl(210, 50%, 15%);
   }
 }
 
@@ -306,18 +306,18 @@ body {
 
 .btn-primary {
   @apply bg-primary text-white hover:bg-primary-dark transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1;
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, hsl(210, 40%, 20%) 0%, hsl(210, 50%, 15%) 100%);
+  box-shadow: 0 4px 20px rgba(107, 114, 128, 0.3);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 30px rgba(107, 114, 128, 0.4);
 }
 
 .section-badge {
   @apply inline-flex items-center px-6 py-3 rounded-full text-sm font-bold;
-  background: linear-gradient(135deg, hsl(var(--beige)) 0%, hsl(var(--orange)) 100%);
-  box-shadow: 0 2px 10px rgba(255, 193, 7, 0.3);
+  background: linear-gradient(135deg, hsl(210, 10%, 70%) 0%, hsl(210, 15%, 50%) 100%);
+  box-shadow: 0 2px 10px rgba(107, 114, 128, 0.3);
 }
 
 .section-title {
@@ -355,8 +355,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(107, 114, 128, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(148, 163, 184, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -380,8 +380,8 @@ body {
 }
 
 .premium-input:focus {
-  border-color: hsl(var(--primary));
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  border-color: hsl(210, 40%, 20%);
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
   background: #ffffff;
 }
 
@@ -391,11 +391,11 @@ body {
 }
 
 .status-success {
-  @apply bg-green-50 text-green-700 border border-green-200;
+  @apply bg-slate-50 text-slate-700 border border-slate-200;
 }
 
 .status-warning {
-  @apply bg-yellow-50 text-yellow-700 border border-yellow-200;
+  @apply bg-slate-100 text-slate-800 border border-slate-300;
 }
 
 /* Enhanced Testimonial Cards */
