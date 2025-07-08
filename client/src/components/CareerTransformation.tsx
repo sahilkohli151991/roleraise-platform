@@ -5,14 +5,14 @@ export default function CareerTransformation() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full text-sm font-bold text-white mb-6 shadow-lg">
+          <div className="section-badge mb-6">
             <Target className="w-5 h-5 mr-2" />
             CAREER TRANSFORMATION
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+          <h2 className="heading-1 mb-6">
             From Struggling Job Seeker to <span className="text-gradient">Top Tech Talent</span>
           </h2>
-          <p className="text-2xl text-gray-700 font-bold bg-gray-100 inline-block px-6 py-2 rounded-full">
+          <p className="body-text-large bg-gray-100 inline-block px-6 py-2 rounded-full">
             In just 90 days
           </p>
         </div>

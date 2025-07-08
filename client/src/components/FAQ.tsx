@@ -32,11 +32,11 @@ export default function FAQ() {
     <section id="faq" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-pink rounded-full text-sm font-semibold text-white mb-6">
+          <div className="section-badge mb-6">
             <HelpCircle className="w-4 h-4 mr-2" />
             Common Questions
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+          <h2 className="heading-2 mb-6">
             But what if you're thinking...
           </h2>
         </div>
@@ -44,8 +44,8 @@ export default function FAQ() {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {questions.map((item, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-lg font-bold text-primary mb-4">"{item.question}"</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="heading-4 mb-4">"{item.question}"</h3>
+              <p className="body-text">
                 <strong>{item.answer}</strong>
               </p>
             </div>

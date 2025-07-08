@@ -58,12 +58,12 @@ export default function Mentors() {
     <section id="mentors" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-sky rounded-full text-sm font-semibold text-white mb-6">
+          <div className="section-badge mb-6">
             <Shield className="w-4 h-4 mr-2" />
             World-Class Mentors
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Learn from the Best</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="heading-2 mb-6">Learn from the Best</h2>
+          <p className="body-text-large max-w-3xl mx-auto">
             Get 1-on-1 mentorship from executives at Google, Meta, Amazon, Netflix, and 100+ other top companies
           </p>
         </div>

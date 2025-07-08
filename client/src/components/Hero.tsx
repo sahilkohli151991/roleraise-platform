@@ -79,34 +79,43 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <div className="section-badge mb-8">
-              ⚡ 500+ Tech Professionals Hired This Year
+              ⚡ 500+ Tech Professionals Placed in 2024
             </div>
             
-            <h1 className="section-title">
-              From $120K to $200K+ in 90 Days
+            <h1 className="heading-1 mb-6">
+              Accelerate Your Career to $200K+ Tech Roles
             </h1>
             
-            <p className="text-2xl text-gray-700 mb-6 font-semibold">
-              Stop applying to hundreds of jobs. Get direct referrals to $200K+ roles at top tech companies like Google, Meta, Amazon, Netflix, Uber, Airbnb, and more.
+            <p className="body-text-large mb-6 text-gray-700">
+              Skip the endless job applications. Get direct access to exclusive $200K+ opportunities at leading technology companies through our proven referral network.
             </p>
             
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              <strong className="text-red-600">We're not selling courses.</strong> We're your career transformation partners with a proven 90-day system.
+            <p className="body-text mb-10 text-gray-600">
+              <strong className="text-emerald-600 font-semibold">Not another course or bootcamp.</strong> We're your strategic career partners with a data-driven 90-day transformation system.
             </p>
             
-            <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 mb-12 border border-gray-200 shadow-lg">
-              <div className="grid grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-5xl font-black text-green-600 mb-2">92%</div>
-                  <div className="text-sm text-gray-700 font-bold">Get Job Offers</div>
+            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 mb-12 border border-gray-100 shadow-xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center group">
+                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 mb-4 border border-emerald-100 group-hover:shadow-lg transition-all duration-300">
+                    <div className="text-4xl font-black text-emerald-700 mb-2">92%</div>
+                    <div className="text-sm font-semibold text-emerald-600 uppercase tracking-wide">Success Rate</div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">Of clients receive job offers within 90 days</p>
                 </div>
-                <div className="text-center">
-                  <div className="text-5xl font-black text-green-600 mb-2">$34K</div>
-                  <div className="text-sm text-gray-700 font-bold">Avg. Salary Boost</div>
+                <div className="text-center group">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 mb-4 border border-blue-100 group-hover:shadow-lg transition-all duration-300">
+                    <div className="text-4xl font-black text-blue-700 mb-2">$34K</div>
+                    <div className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Avg. Salary Increase</div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">Average salary boost for successful candidates</p>
                 </div>
-                <div className="text-center">
-                  <div className="text-5xl font-black text-green-600 mb-2">6 Weeks</div>
-                  <div className="text-sm text-gray-700 font-bold">Time to Offer</div>
+                <div className="text-center group">
+                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 mb-4 border border-purple-100 group-hover:shadow-lg transition-all duration-300">
+                    <div className="text-4xl font-black text-purple-700 mb-2">6 Weeks</div>
+                    <div className="text-sm font-semibold text-purple-600 uppercase tracking-wide">Time to Offer</div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">Average time from start to job offer</p>
                 </div>
               </div>
             </div>

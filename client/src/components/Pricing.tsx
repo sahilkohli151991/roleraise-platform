@@ -45,12 +45,12 @@ export default function Pricing() {
     <section id="pricing" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-pink rounded-full text-sm font-semibold text-white mb-6">
+          <div className="section-badge mb-6">
             <CreditCard className="w-4 h-4 mr-2" />
             Investment Options
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Your $200K+ Career Investment</h2>
-          <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto">
+          <h2 className="heading-2 mb-6">Your $200K+ Career Investment</h2>
+          <p className="body-text-large max-w-3xl mx-auto">
             Choose the fastest path to your dream role. Average ROI: 400% within 90 days
           </p>
           <div className="mt-6 bg-yellow-100 border border-yellow-400 rounded-lg p-4 inline-block">
