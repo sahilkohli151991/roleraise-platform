@@ -70,6 +70,9 @@ The application uses PostgreSQL with the following main tables:
 ### Payment Processing
 - **PayPal SDK**: For handling payments and subscriptions
 - Environment variables: `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`
+- Integration: Embedded PayPal buttons in pricing cards
+- Payment flow: Order creation → PayPal checkout → Payment capture
+- Plans: Essential ($2,497), Premium ($4,997), Elite ($9,997)
 
 ### Data Collection
 - **Google Sheets API**: For storing assessment data
@@ -117,3 +120,4 @@ Preferred communication style: Simple, everyday language.
 Changelog:
 - July 08, 2025. Initial setup
 - July 08, 2025. Added Calendly integration with inline widget and popup functionality
+- July 08, 2025. Integrated PayPal payment processing for all pricing plans
