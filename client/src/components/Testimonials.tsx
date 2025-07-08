@@ -10,6 +10,7 @@ interface Testimonial {
   avatarUrl?: string;
   salaryIncrease?: string;
   rating?: number;
+  location?: string;
 }
 
 export default function Testimonials() {
@@ -86,6 +87,9 @@ export default function Testimonials() {
                 <div>
                   <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
                   <p className="text-gray-600 font-medium">{testimonial.role} @ {testimonial.company}</p>
+                  {testimonial.location && (
+                    <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                  )}
                 </div>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed text-lg">"{testimonial.content}"</p>
