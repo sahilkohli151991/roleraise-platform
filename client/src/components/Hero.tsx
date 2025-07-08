@@ -25,20 +25,23 @@ export default function Hero() {
       email: '',
       currentRole: '',
       experience: '',
-      currentSalary: '',
+      salary: '',
       targetSalary: '',
     },
   });
 
   const assessmentMutation = useMutation({
-    mutationFn: (data: InsertAssessment) => apiRequest('/api/assessments', 'POST', data),
+    mutationFn: async (data: InsertAssessment) => {
+      const response = await apiRequest('POST', '/api/assessment', data);
+      return response.json();
+    },
     onSuccess: () => {
       setIsSubmitted(true);
       toast({
         title: "Assessment submitted successfully!",
         description: "We'll be in touch within 24 hours to discuss your career goals.",
       });
-      queryClient.invalidateQueries({ queryKey: ['/api/assessments'] });
+      queryClient.invalidateQueries({ queryKey: ['/api/assessment'] });
     },
     onError: (error) => {
       console.error('Assessment submission failed:', error);
@@ -238,7 +241,7 @@ export default function Hero() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
-                          name="currentSalary"
+                          name="salary"
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-gray-700 font-bold">Current Salary</FormLabel>
