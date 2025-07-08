@@ -87,7 +87,7 @@ export default function PayPalButton({
         onClick={() => alert("PayPal is temporarily unavailable. Please contact support.")}
         className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
       >
-        Pay with PayPal - ${parseInt(amount).toLocaleString()}
+        Enroll Now - ${parseInt(amount).toLocaleString()}
       </button>
     );
   }
@@ -98,7 +98,7 @@ export default function PayPalButton({
       onClick={handlePayPalClick}
       className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
     >
-      Pay with PayPal - ${parseInt(amount).toLocaleString()}
+      Enroll Now - ${parseInt(amount).toLocaleString()}
     </button>
   );
 }
