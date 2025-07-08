@@ -12,7 +12,7 @@ declare global {
 
 export default function BookCall() {
   // Your Calendly URL - replace with your actual Calendly link
-  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL || 'https://calendly.com/your-username/strategy-call';
+  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL || 'https://calendly.com/kohlisahil151991';
 
   useEffect(() => {
     // Load Calendly inline and popup widget scripts
@@ -69,7 +69,7 @@ export default function BookCall() {
             <div className="text-center mt-6">
               <button
                 onClick={() => {
-                  if (window.Calendly && !calendlyUrl.includes('your-username')) {
+                  if (window.Calendly) {
                     window.Calendly.initPopupWidget({ url: calendlyUrl });
                   }
                 }}

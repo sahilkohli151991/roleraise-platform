@@ -114,7 +114,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4 mb-12">
               <Button 
                 onClick={() => {
-                  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL;
+                  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL || 'https://calendly.com/kohlisahil151991';
                   if (calendlyUrl && !calendlyUrl.includes('your-username')) {
                     // Open Calendly in a popup
                     if (window.Calendly) {
