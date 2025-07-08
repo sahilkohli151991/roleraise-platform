@@ -298,6 +298,25 @@ body {
 }
 
 /* Premium Professional Components */
+
+/* Limited offer banner animation */
+@keyframes limited-offer-pulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.limited-offer-banner {
+  background: linear-gradient(90deg, #dbeafe, #ecfdf5, #dbeafe);
+  background-size: 200% 200%;
+  animation: limited-offer-pulse 4s ease-in-out infinite;
+}
 .card-hover {
   @apply transition-all duration-500 hover:shadow-2xl hover:transform hover:-translate-y-3;
   background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
