@@ -1,5 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { Shield } from 'lucide-react';
+import GoogleLogo from '@assets/Google_Logo_1.png';
+import MetaLogo from '@assets/Meta_idlf4cVSsS_1.png';
+import AmazonLogo from '@assets/Amazon_Logo_1.png';
+import NetflixLogo from '@assets/Netflix_Logo_1.png';
 
 interface Mentor {
   id?: number;
@@ -84,13 +88,31 @@ export default function Mentors() {
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">and 100+ more mentors from top companies</p>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <span className="text-2xl font-bold text-gray-400">Google</span>
-            <span className="text-2xl font-bold text-gray-400">Meta</span>
-            <span className="text-2xl font-bold text-gray-400">Amazon</span>
-            <span className="text-2xl font-bold text-gray-400">Netflix</span>
-            <span className="text-2xl font-bold text-gray-400">Apple</span>
+          <p className="body-text mb-8">and 100+ more mentors from top companies</p>
+          <div className="flex justify-center items-center space-x-8 md:space-x-12 flex-wrap gap-4">
+            <img 
+              src={GoogleLogo} 
+              alt="Google" 
+              className="h-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+            />
+            <img 
+              src={MetaLogo} 
+              alt="Meta" 
+              className="h-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+            />
+            <img 
+              src={AmazonLogo} 
+              alt="Amazon" 
+              className="h-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+            />
+            <img 
+              src={NetflixLogo} 
+              alt="Netflix" 
+              className="h-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+            />
+            <div className="flex items-center">
+              <span className="text-2xl font-bold text-gray-400 opacity-60">Apple</span>
+            </div>
           </div>
         </div>
       </div>
