@@ -141,10 +141,11 @@ export default function Hero() {
               </Button>
             </div>
             
-            {/* Professional Running Banner */}
-            <div className="limited-offer-banner border border-blue-200 rounded-lg p-4 mb-12 text-center overflow-hidden">
-              <div className="text-blue-700 font-semibold text-sm mb-1">⏰ Limited Time Offer</div>
-              <div className="text-gray-900 font-bold text-lg">Only 10 Strategy Calls Left This Month</div>
+            {/* Subtle Limited Offer Banner */}
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-12 text-center">
+              <div className="text-gray-600 font-medium text-sm mb-1">Limited Time Offer</div>
+              <div className="text-gray-800 font-medium text-base">Only 10 Strategy Calls Left This Month</div>
+              <div className="text-gray-500 text-sm mt-1">Don't miss out on your chance to land a $200K+ role</div>
             </div>
             
             <div className="flex flex-wrap gap-8 text-sm text-gray-700 font-semibold">
@@ -174,8 +175,8 @@ export default function Hero() {
                   {isSubmitted ? 'We\'ll be in touch within 24 hours' : 'See exactly how to land your dream role in 90 days'}
                 </CardDescription>
                 {!isSubmitted && (
-                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-3">
-                    <p className="text-blue-700 font-semibold text-sm">⏰ Only 10 Strategy Calls Left This Month</p>
+                  <div className="mt-4 bg-gray-50 border border-gray-200 rounded-lg p-3">
+                    <p className="text-gray-600 font-medium text-sm">Only 10 Strategy Calls Left This Month</p>
                   </div>
                 )}
               </CardHeader>
