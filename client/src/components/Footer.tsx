@@ -34,12 +34,12 @@ export default function Footer() {
           
           {/* Program */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Program</h3>
-            <ul className="space-y-2 text-gray-400">
+            <h3 className="text-lg font-semibold mb-4 text-white">Program</h3>
+            <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => scrollToSection('how-it-works')}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   How It Works
                 </button>
@@ -47,7 +47,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('mentors')}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   Mentors
                 </button>
@@ -55,7 +55,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('testimonials')}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   Success Stories
                 </button>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('pricing')}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   Pricing
                 </button>
@@ -73,23 +73,23 @@ export default function Footer() {
           
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Interview Guide</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Salary Negotiation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">System Design</a></li>
+            <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Interview Guide</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Salary Negotiation</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">System Design</a></li>
             </ul>
           </div>
           
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>

@@ -127,3 +127,5 @@ Changelog:
 - July 08, 2025. Redesigned statistics section with professional colored cards and detailed explanations
 - July 08, 2025. Added company logos to mentors section (Google, Meta, Amazon, Netflix, Apple)
 - July 08, 2025. Improved navigation with lighter colors and better hover effects for professional appearance
+- July 08, 2025. Enhanced conversion optimization with animated urgency indicators and improved pricing guarantees
+- July 08, 2025. Fixed footer visibility issues - all sections (Program, Resources, Company) now properly visible with white headings
