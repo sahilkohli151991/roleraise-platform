@@ -6,6 +6,12 @@ declare global {
   interface Window {
     Calendly?: {
       initPopupWidget: (options: { url: string }) => void;
+      initInlineWidget: (options: { 
+        url: string; 
+        parentElement: Element | null; 
+        prefill?: any; 
+        utm?: any; 
+      }) => void;
     };
   }
 }
@@ -15,26 +21,40 @@ export default function BookCall() {
   const calendlyUrl = import.meta.env.VITE_CALENDLY_URL || 'https://calendly.com/kohlisahil151991';
 
   useEffect(() => {
-    // Load Calendly inline and popup widget scripts
-    const inlineScript = document.createElement('script');
-    inlineScript.src = 'https://assets.calendly.com/assets/external/widget.js';
-    inlineScript.async = true;
-    document.body.appendChild(inlineScript);
+    // Load Calendly CSS first
+    if (!document.querySelector('link[href="https://assets.calendly.com/assets/external/widget.css"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
 
-    const popupScript = document.createElement('script');
-    popupScript.src = 'https://assets.calendly.com/assets/external/widget.js';
-    popupScript.async = true;
-    document.head.appendChild(popupScript);
+    // Load Calendly widget script
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
 
-    return () => {
-      if (document.body.contains(inlineScript)) {
-        document.body.removeChild(inlineScript);
+    // Simple timeout to ensure widget loads after script
+    const timer = setTimeout(() => {
+      const widgetElement = document.querySelector('.calendly-inline-widget');
+      if (widgetElement && !widgetElement.innerHTML.trim()) {
+        // If widget is empty, try to initialize
+        if (window.Calendly?.initInlineWidget) {
+          window.Calendly.initInlineWidget({
+            url: calendlyUrl,
+            parentElement: widgetElement,
+            prefill: {},
+            utm: {}
+          });
+        }
       }
-      if (document.head.contains(popupScript)) {
-        document.head.removeChild(popupScript);
-      }
-    };
-  }, []);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [calendlyUrl]);
 
   return (
     <section id="book-call" className="py-20 bg-white">
@@ -63,6 +83,20 @@ export default function BookCall() {
                 data-url={calendlyUrl}
                 style={{ minWidth: '320px', height: '700px' }}
               />
+            </div>
+            
+            {/* Fallback - Direct link if widget doesn't load */}
+            <div className="text-center mt-4">
+              <p className="text-gray-600 text-sm mb-2">Widget not loading?</p>
+              <a 
+                href={calendlyUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                Open Calendly in new tab
+              </a>
             </div>
             
             {/* Alternative: Open in Popup Button */}

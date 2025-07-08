@@ -18,6 +18,12 @@ declare global {
   interface Window {
     Calendly?: {
       initPopupWidget: (options: { url: string }) => void;
+      initInlineWidget: (options: { 
+        url: string; 
+        parentElement: Element | null; 
+        prefill?: any; 
+        utm?: any; 
+      }) => void;
     };
   }
 }
@@ -70,6 +76,16 @@ export default function Hero() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Load Calendly script
+  const loadCalendlyScript = () => {
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.head.appendChild(script);
     }
   };
 
