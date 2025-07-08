@@ -121,3 +121,5 @@ Changelog:
 - July 08, 2025. Initial setup
 - July 08, 2025. Added Calendly integration with inline widget and popup functionality
 - July 08, 2025. Integrated PayPal payment processing for all pricing plans
+- July 08, 2025. Added animated company logos section with real brand logos and scrolling animation
+- July 08, 2025. Updated scheduling messages to use "RoleRaise" branding while maintaining Sahil Kohli as recipient
