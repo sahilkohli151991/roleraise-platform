@@ -1,56 +1,128 @@
 [
   {
-    "name": "Sarah Chen",
+    "name": "Akhil Sharma",
     "role": "Senior Software Engineer",
     "company": "Google",
-    "content": "RoleRaise helped me go from $120K to $280K in just 3 months. The mentorship and interview prep were incredible!",
-    "avatarUrl": "https://images.unsplash.com/photo-1494790108755-2616b9723b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
-    "salaryIncrease": "+$160K increase",
+    "content": "RoleRaise transformed my career completely. I went from a mid-level developer to a senior engineer at Google with a $180K salary increase. The personalized coaching and insider knowledge of tech hiring processes made all the difference.",
+    "avatarUrl": "/attached_assets/akhil_1752003812461.jpeg",
+    "salaryIncrease": "$180K",
     "rating": 5
   },
   {
-    "name": "Mike Rodriguez",
+    "name": "Alok Gupta",
     "role": "Product Manager",
     "company": "Meta",
-    "content": "The system design training was exceptional. I went from failing interviews to landing a PM role at Meta with a $220K offer.",
-    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
-    "salaryIncrease": "+$90K increase",
+    "content": "The strategic guidance I received was invaluable. My mentor helped me navigate the complex interview process at Meta and negotiate a compensation package I never thought possible. Worth every penny!",
+    "avatarUrl": "/attached_assets/Alok_1752003812461.jpeg",
+    "salaryIncrease": "$220K",
     "rating": 5
   },
   {
-    "name": "Emily Johnson",
+    "name": "Asad Khan",
     "role": "Data Scientist",
-    "company": "Amazon",
-    "content": "The personalized mentorship made all the difference. My mentor helped me negotiate a $250K package at Amazon!",
-    "avatarUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
-    "salaryIncrease": "+$130K increase",
-    "rating": 5
-  },
-  {
-    "name": "David Park",
-    "role": "Engineering Manager",
     "company": "Netflix",
-    "content": "From startup to FAANG - RoleRaise made the impossible possible. The networking and mentorship were game-changing.",
-    "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
-    "salaryIncrease": "+$180K increase",
+    "content": "RoleRaise didn't just help me land a job at Netflix - they helped me build a career strategy that positions me for long-term success. The ROI on their coaching program is incredible.",
+    "avatarUrl": "/attached_assets/Asad_1752003812461.jpeg",
+    "salaryIncrease": "$165K",
     "rating": 5
   },
   {
-    "name": "Jessica Liu",
-    "role": "Staff Engineer",
+    "name": "Neelabh Singh",
+    "role": "Engineering Manager",
+    "company": "Amazon",
+    "content": "The leadership coaching and technical interview preparation were game-changers. I successfully transitioned from an IC role to engineering management at Amazon with a significant compensation bump.",
+    "avatarUrl": "/attached_assets/Neelabh_1752003812461.jpeg",
+    "salaryIncrease": "$195K",
+    "rating": 5
+  },
+  {
+    "name": "Nimisha Patel",
+    "role": "UX Designer",
     "company": "Apple",
-    "content": "The technical interview prep was incredibly thorough. I felt completely prepared for Apple's rigorous process.",
-    "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
-    "salaryIncrease": "+$210K increase",
+    "content": "From startup to Apple - RoleRaise made it happen. Their design portfolio review and interview coaching helped me showcase my skills effectively and land my dream role.",
+    "avatarUrl": "/attached_assets/Nimisha,jpeg_1752003812462.jpeg",
+    "salaryIncrease": "$145K",
     "rating": 5
   },
   {
-    "name": "Carlos Martinez",
-    "role": "Principal Designer",
+    "name": "Nitil Kumar",
+    "role": "DevOps Engineer",
+    "company": "Microsoft",
+    "content": "The technical depth and industry insights my mentor provided were exceptional. I'm now working at Microsoft with a role that perfectly matches my career goals and a salary that reflects my true value.",
+    "avatarUrl": "/attached_assets/Nitil_1752003812462.jpeg",
+    "salaryIncrease": "$175K",
+    "rating": 5
+  },
+  {
+    "name": "Pranjal Mishra",
+    "role": "Full Stack Developer",
+    "company": "Stripe",
+    "content": "The mock interviews and system design coaching were incredibly thorough. I felt completely prepared for Stripe's rigorous interview process and successfully negotiated a package that exceeded my expectations.",
+    "avatarUrl": "/attached_assets/pranjal_1752003812462.jpeg",
+    "salaryIncrease": "$160K",
+    "rating": 5
+  },
+  {
+    "name": "Raj Patel",
+    "role": "Data Engineer",
+    "company": "Uber",
+    "content": "RoleRaise helped me transition from traditional software development to data engineering at Uber. The specialized coaching for data roles and salary negotiation support were game-changing.",
+    "avatarUrl": "/attached_assets/Raj_1752003812462.jpeg",
+    "salaryIncrease": "$185K",
+    "rating": 5
+  },
+  {
+    "name": "Rajat Jain",
+    "role": "Senior Product Manager",
+    "company": "Airbnb",
+    "content": "The product management coaching and case study preparation helped me land a senior PM role at Airbnb. My mentor's experience at top tech companies provided invaluable insights.",
+    "avatarUrl": "/attached_assets/Rajat_1752003812462.jpeg",
+    "salaryIncrease": "$210K",
+    "rating": 5
+  },
+  {
+    "name": "Ratul Das",
+    "role": "Machine Learning Engineer",
+    "company": "Tesla",
+    "content": "From academia to Tesla - RoleRaise made the impossible possible. The ML-specific interview preparation and industry transition coaching were exactly what I needed.",
+    "avatarUrl": "/attached_assets/ratul_1752003812462.jpeg",
+    "salaryIncrease": "$190K",
+    "rating": 5
+  },
+  {
+    "name": "Safal Adhikari",
+    "role": "Security Engineer",
+    "company": "CloudFlare",
+    "content": "The cybersecurity career coaching and technical interview preparation were outstanding. I successfully transitioned from a smaller company to CloudFlare with a significant salary increase.",
+    "avatarUrl": "/attached_assets/safal_1752003812462.jpeg",
+    "salaryIncrease": "$155K",
+    "rating": 5
+  },
+  {
+    "name": "Sahil Chaudhary",
+    "role": "Backend Engineer",
     "company": "Spotify",
-    "content": "RoleRaise helped me transition from agency work to Big Tech. The portfolio review and design system training were invaluable.",
-    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
-    "salaryIncrease": "+$110K increase",
+    "content": "The system design coaching and backend-specific interview preparation were exceptional. I'm now working at Spotify on music recommendation systems with a role that perfectly matches my passion.",
+    "avatarUrl": "/attached_assets/sahilc_1752003812462.jpeg",
+    "salaryIncrease": "$170K",
+    "rating": 5
+  },
+  {
+    "name": "Saurabh Sharma",
+    "role": "Frontend Engineer",
+    "company": "Figma",
+    "content": "RoleRaise helped me specialize in frontend development and land a role at Figma. The portfolio review and technical coaching for frontend roles were incredibly detailed and effective.",
+    "avatarUrl": "/attached_assets/Saurabh_1752003812462.jpeg",
+    "salaryIncrease": "$165K",
+    "rating": 5
+  },
+  {
+    "name": "Sumit Agarwal",
+    "role": "Software Architect",
+    "company": "Salesforce",
+    "content": "The senior-level coaching and architecture interview preparation helped me transition to a software architect role at Salesforce. My mentor's guidance on technical leadership was invaluable.",
+    "avatarUrl": "/attached_assets/sumit_1752003812463.jpeg",
+    "salaryIncrease": "$200K",
     "rating": 5
   }
 ]
