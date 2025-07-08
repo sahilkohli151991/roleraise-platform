@@ -13,6 +13,15 @@ import { insertAssessmentSchema } from '@shared/schema';
 import { apiRequest } from '@/lib/queryClient';
 import type { InsertAssessment } from '@shared/schema';
 
+// Calendly widget type definitions
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
+
 export default function Hero() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
@@ -104,7 +113,20 @@ export default function Hero() {
             
             <div className="flex flex-wrap gap-4 mb-12">
               <Button 
-                onClick={() => scrollToSection('book-call')}
+                onClick={() => {
+                  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL;
+                  if (calendlyUrl && !calendlyUrl.includes('your-username')) {
+                    // Open Calendly in a popup
+                    if (window.Calendly) {
+                      window.Calendly.initPopupWidget({ url: calendlyUrl });
+                    } else {
+                      // Fallback to scrolling to embedded widget
+                      scrollToSection('book-call');
+                    }
+                  } else {
+                    scrollToSection('book-call');
+                  }
+                }}
                 className="btn-primary px-12 py-6 text-xl font-black rounded-2xl relative overflow-hidden group"
               >
                 <span className="relative z-10">🚀 BOOK FREE STRATEGY CALL</span>

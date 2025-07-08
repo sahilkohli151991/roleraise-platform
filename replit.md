@@ -77,8 +77,10 @@ The application uses PostgreSQL with the following main tables:
 - Environment variables: `GOOGLE_SERVICE_ACCOUNT_JSON`, `GOOGLE_SHEET_ID`
 
 ### Scheduling
-- **Calendly**: Embedded widget for booking strategy calls
-- Configurable calendar URL in components
+- **Calendly**: Embedded widget and popup integration for booking strategy calls
+- Environment variable: `VITE_CALENDLY_URL` (your Calendly event URL)
+- Dual integration: inline widget + popup option
+- Fallback contact form when URL not configured
 
 ### Database
 - **Neon Database**: PostgreSQL hosting
@@ -104,6 +106,7 @@ Required environment variables:
 - `PAYPAL_CLIENT_SECRET`: PayPal application secret
 - `GOOGLE_SERVICE_ACCOUNT_JSON`: Google service account credentials
 - `GOOGLE_SHEET_ID`: Target Google Sheet for data collection
+- `VITE_CALENDLY_URL`: Your Calendly event URL for strategy calls
 
 ## User Preferences
 
@@ -113,3 +116,4 @@ Preferred communication style: Simple, everyday language.
 
 Changelog:
 - July 08, 2025. Initial setup
+- July 08, 2025. Added Calendly integration with inline widget and popup functionality
