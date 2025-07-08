@@ -20,6 +20,7 @@ export default function PayPalButton({
   const [isLoading, setIsLoading] = useState(true);
   const [isConfigured, setIsConfigured] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sdkReady, setSdkReady] = useState(false);
 
   useEffect(() => {
     checkPayPalSetup();
@@ -32,7 +33,7 @@ export default function PayPalButton({
         const data = await response.json();
         if (data.clientToken) {
           setIsConfigured(true);
-          setIsLoading(false);
+          loadPayPalSDK();
         } else {
           setError("PayPal not configured");
         }
@@ -46,8 +47,93 @@ export default function PayPalButton({
     }
   };
 
+  const loadPayPalSDK = async () => {
+    if (paypalSDKLoaded) {
+      await initPayPal();
+      return;
+    }
+
+    if (paypalSDKLoading) {
+      return;
+    }
+
+    paypalSDKLoading = true;
+
+    try {
+      const script = document.createElement("script");
+      script.src = "https://www.sandbox.paypal.com/web-sdk/v6/core";
+      script.async = true;
+      script.onload = async () => {
+        paypalSDKLoaded = true;
+        paypalSDKLoading = false;
+        await initPayPal();
+      };
+      script.onerror = () => {
+        paypalSDKLoading = false;
+        setError("PayPal SDK failed to load");
+      };
+      document.head.appendChild(script);
+    } catch (error) {
+      paypalSDKLoading = false;
+      setError("PayPal SDK load error");
+    }
+  };
+
+  const initPayPal = async () => {
+    try {
+      const response = await fetch("/setup");
+      const data = await response.json();
+      
+      if (!data.clientToken) {
+        throw new Error("No client token received");
+      }
+
+      const sdkInstance = await (window as any).paypal.createInstance({
+        clientToken: data.clientToken,
+        components: ["paypal-payments"],
+      });
+
+      const paypalCheckout = sdkInstance.createPayPalOneTimePaymentSession({
+        onApprove: async (data: any) => {
+          try {
+            const response = await fetch(`/order/${data.orderId}/capture`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+            });
+            const result = await response.json();
+            console.log("Payment successful:", result);
+            alert("Payment completed successfully! Thank you for enrolling in RoleRaise!");
+          } catch (error) {
+            console.error("Payment capture failed:", error);
+            alert("Payment processing failed. Please try again.");
+          }
+        },
+        onCancel: (data: any) => {
+          console.log("Payment cancelled:", data);
+          alert("Payment was cancelled. You can try again anytime.");
+        },
+        onError: (error: any) => {
+          console.error("PayPal error:", error);
+          alert("Payment error occurred. Please try again.");
+        },
+      });
+
+      // Store the checkout instance for this button
+      (window as any)[`paypalCheckout_${id}`] = paypalCheckout;
+      setSdkReady(true);
+    } catch (error) {
+      console.error("PayPal initialization failed:", error);
+      setError("PayPal initialization failed");
+    }
+  };
+
   const handlePayPalClick = async () => {
     try {
+      const checkout = (window as any)[`paypalCheckout_${id}`];
+      if (!checkout) {
+        throw new Error("PayPal not ready");
+      }
+
       // Create order
       const orderResponse = await fetch("/order", {
         method: "POST",
@@ -61,8 +147,11 @@ export default function PayPalButton({
       
       const orderData = await orderResponse.json();
       
-      // Simulate PayPal redirect for now
-      alert(`PayPal order created successfully! Order ID: ${orderData.id}\n\nThis would normally redirect to PayPal checkout.`);
+      // Start PayPal checkout
+      await checkout.start(
+        { paymentFlow: "auto" },
+        Promise.resolve({ orderId: orderData.id })
+      );
       
     } catch (error) {
       console.error("Payment error:", error);
@@ -70,13 +159,13 @@ export default function PayPalButton({
     }
   };
 
-  if (isLoading) {
+  if (isLoading || !sdkReady) {
     return (
       <button
         disabled
         className="w-full py-3 px-6 bg-gray-300 text-gray-600 font-semibold rounded-lg cursor-not-allowed"
       >
-        Loading PayPal...
+        {isLoading ? "Loading PayPal..." : "Preparing PayPal..."}
       </button>
     );
   }
