@@ -8,69 +8,141 @@ export default function SocialProof() {
         {/* Company Logos */}
         <div className="text-center mb-12">
           <p className="text-gray-600 font-semibold mb-8">Our clients now work at:</p>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/Google_Logo_1.png"
-                alt="Google"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/Meta_idlf4cVSsS_1.png"
-                alt="Meta"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/Amazon_Logo_1.png"
-                alt="Amazon"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/Netflix_Logo_1.png"
-                alt="Netflix"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/Stripe_Logo_1.png"
-                alt="Stripe"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/KPMG_id9tLD2YU7_1.png"
-                alt="KPMG"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/X_idJxGuURW1_1.png"
-                alt="X"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/Innovaccer_id6-tvzgdK_1.png"
-                alt="Innovaccer"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img 
-                src="/attached_assets/BeOne Medicines_idjdyMFja5_1.png"
-                alt="BeOne Medicines"
-                className="h-16 w-auto object-contain"
-              />
+          <div className="overflow-hidden">
+            <div className="animate-[scroll_30s_linear_infinite] flex items-center space-x-12">
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Google_Logo_1.png"
+                  alt="Google"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Meta_idlf4cVSsS_1.png"
+                  alt="Meta"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Amazon_Logo_1.png"
+                  alt="Amazon"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Netflix_Logo_1.png"
+                  alt="Netflix"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Stripe_Logo_1.png"
+                  alt="Stripe"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/KPMG_id9tLD2YU7_1.png"
+                  alt="KPMG"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/X_idJxGuURW1_1.png"
+                  alt="X"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Innovaccer_id6-tvzgdK_1.png"
+                  alt="Innovaccer"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/BeOne Medicines_idjdyMFja5_1.png"
+                  alt="BeOne Medicines"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              
+              {/* Additional companies */}
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Microsoft</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Apple</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Tesla</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Uber</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Airbnb</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Spotify</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Salesforce</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Adobe</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Oracle</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">IBM</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">LinkedIn</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Snapchat</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">PayPal</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Zoom</span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-gray-600 opacity-80 hover:opacity-100 transition-opacity duration-300">Slack</span>
+              </div>
+              
+              {/* Duplicate for seamless loop */}
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Google_Logo_1.png"
+                  alt="Google"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Meta_idlf4cVSsS_1.png"
+                  alt="Meta"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/attached_assets/Amazon_Logo_1.png"
+                  alt="Amazon"
+                  className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>
