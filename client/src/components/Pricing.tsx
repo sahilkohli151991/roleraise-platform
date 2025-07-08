@@ -1,5 +1,5 @@
 import { Check, CreditCard } from 'lucide-react';
-// import PayPalButton from './PayPalButton';
+import PayPalButton from './PayPalButton';
 
 export default function Pricing() {
   const plans = [
@@ -93,15 +93,12 @@ export default function Pricing() {
               </ul>
               
               <div className="paypal-button-container">
-                <button 
-                  className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
-                  onClick={() => {
-                    // PayPal integration temporarily disabled due to runtime errors
-                    alert(`PayPal payment for ${plan.name} plan ($${plan.price}) will be available soon!`);
-                  }}
-                >
-                  Pay with PayPal - ${plan.price.toLocaleString()}
-                </button>
+                <PayPalButton 
+                  amount={plan.price.toString()}
+                  currency="USD"
+                  intent="CAPTURE"
+                  id={`paypal-button-${plan.name.toLowerCase()}`}
+                />
               </div>
             </div>
           ))}
