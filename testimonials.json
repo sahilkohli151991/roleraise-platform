@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Sarah Chen",
+    "role": "Senior Software Engineer",
+    "company": "Google",
+    "content": "RoleRaise helped me go from $120K to $280K in just 3 months. The mentorship and interview prep were incredible!",
+    "avatarUrl": "https://images.unsplash.com/photo-1494790108755-2616b9723b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "salaryIncrease": "+$160K increase",
+    "rating": 5
+  },
+  {
+    "name": "Mike Rodriguez",
+    "role": "Product Manager",
+    "company": "Meta",
+    "content": "The system design training was exceptional. I went from failing interviews to landing a PM role at Meta with a $220K offer.",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "salaryIncrease": "+$90K increase",
+    "rating": 5
+  },
+  {
+    "name": "Emily Johnson",
+    "role": "Data Scientist",
+    "company": "Amazon",
+    "content": "The personalized mentorship made all the difference. My mentor helped me negotiate a $250K package at Amazon!",
+    "avatarUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "salaryIncrease": "+$130K increase",
+    "rating": 5
+  },
+  {
+    "name": "David Park",
+    "role": "Engineering Manager",
+    "company": "Netflix",
+    "content": "From startup to FAANG - RoleRaise made the impossible possible. The networking and mentorship were game-changing.",
+    "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "salaryIncrease": "+$180K increase",
+    "rating": 5
+  },
+  {
+    "name": "Jessica Liu",
+    "role": "Staff Engineer",
+    "company": "Apple",
+    "content": "The technical interview prep was incredibly thorough. I felt completely prepared for Apple's rigorous process.",
+    "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "salaryIncrease": "+$210K increase",
+    "rating": 5
+  },
+  {
+    "name": "Carlos Martinez",
+    "role": "Principal Designer",
+    "company": "Spotify",
+    "content": "RoleRaise helped me transition from agency work to Big Tech. The portfolio review and design system training were invaluable.",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "salaryIncrease": "+$110K increase",
+    "rating": 5
+  }
+]

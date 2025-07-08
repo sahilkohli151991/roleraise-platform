@@ -1,0 +1,66 @@
+[
+  {
+    "name": "David Kim",
+    "title": "VP Engineering",
+    "company": "Google",
+    "bio": "15+ years building teams and products at Google. Expert in system design and engineering leadership.",
+    "avatarUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "15+ years"
+  },
+  {
+    "name": "Lisa Martinez",
+    "title": "Director of Product",
+    "company": "Meta",
+    "bio": "Led product strategy for Instagram Stories and Reels. Expert in product management and growth.",
+    "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "12+ years"
+  },
+  {
+    "name": "James Thompson",
+    "title": "Principal Scientist",
+    "company": "Amazon",
+    "bio": "ML expert who built recommendation systems for Amazon Prime. Specializes in data science and AI.",
+    "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "18+ years"
+  },
+  {
+    "name": "Rachel Park",
+    "title": "Engineering Manager",
+    "company": "Netflix",
+    "bio": "Scaled Netflix's streaming platform to 200M+ users. Expert in distributed systems and leadership.",
+    "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "10+ years"
+  },
+  {
+    "name": "Michael Chen",
+    "title": "Staff Engineer",
+    "company": "Apple",
+    "bio": "Core iOS framework developer. Expert in mobile development and performance optimization.",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "14+ years"
+  },
+  {
+    "name": "Angela Rodriguez",
+    "title": "Design Director",
+    "company": "Airbnb",
+    "bio": "Led design for Airbnb's host experience. Expert in user research and product design.",
+    "avatarUrl": "https://images.unsplash.com/photo-1494790108755-2616b9723b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "11+ years"
+  },
+  {
+    "name": "Thomas Wilson",
+    "title": "CTO",
+    "company": "Stripe",
+    "bio": "Built Stripe's payment infrastructure. Expert in fintech and scalable systems.",
+    "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "16+ years"
+  },
+  {
+    "name": "Priya Patel",
+    "title": "VP of Data Science",
+    "company": "Uber",
+    "bio": "Led data science initiatives for Uber's pricing and matching algorithms. Expert in machine learning.",
+    "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400",
+    "experience": "13+ years"
+  }
+]
