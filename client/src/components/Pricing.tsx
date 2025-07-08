@@ -1,4 +1,4 @@
-import { Check, CreditCard } from 'lucide-react';
+import { Check, CreditCard, Users, Award } from 'lucide-react';
 import PayPalButton from './PayPalButton';
 
 export default function Pricing() {
@@ -105,11 +105,38 @@ export default function Pricing() {
         </div>
         
         <div className="text-center mt-16">
-          <div className="inline-flex items-center px-6 py-3 bg-green-100 rounded-full text-green-800 font-semibold">
-            <Check className="w-5 h-5 mr-2" />
-            30-Day Money-Back Guarantee
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Check className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="heading-4 mb-2">90-Day Guarantee</h3>
+                <p className="text-gray-600 text-sm">Get 3+ interviews or full refund</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="heading-4 mb-2">FAANG Mentors</h3>
+                <p className="text-gray-600 text-sm">Direct access to top executives</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="heading-4 mb-2">92% Success Rate</h3>
+                <p className="text-gray-600 text-sm">Proven track record of results</p>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="inline-flex items-center px-6 py-3 bg-green-100 rounded-full text-green-800 font-semibold mb-4">
+                <Check className="w-5 h-5 mr-2" />
+                Risk-Free Investment
+              </div>
+              <p className="text-gray-600">Join 500+ professionals who transformed their careers with our proven system</p>
+            </div>
           </div>
-          <p className="text-gray-600 mt-4">Not satisfied? Get a full refund within 30 days, no questions asked.</p>
         </div>
       </div>
     </section>

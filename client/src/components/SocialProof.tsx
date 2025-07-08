@@ -7,7 +7,12 @@ export default function SocialProof() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Company Logos */}
         <div className="text-center mb-12">
-          <p className="text-gray-600 font-semibold mb-8">Our clients now work at:</p>
+          <div className="section-badge mb-8">
+            <TrendingUp className="w-4 h-4 mr-2" />
+            Success Stories
+          </div>
+          <h2 className="heading-3 mb-4">Where Our Clients Work Now</h2>
+          <p className="body-text mb-8">500+ professionals placed at top companies in 2024</p>
           <div className="overflow-hidden">
             <div className="animate-[scroll_30s_linear_infinite] flex items-center space-x-12">
               <div className="flex items-center justify-center min-w-[120px] hover:scale-110 transition-transform duration-300">

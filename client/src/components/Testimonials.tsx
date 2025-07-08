@@ -70,8 +70,8 @@ export default function Testimonials() {
             <Heart className="w-4 h-4 mr-2" />
             Success Stories
           </div>
-          <h2 className="section-title">What Our Members Say</h2>
-          <p className="section-subtitle">
+          <h2 className="heading-2">What Our Members Say</h2>
+          <p className="body-text-large">
             Join hundreds of professionals who've transformed their careers and doubled their salaries
           </p>
         </div>

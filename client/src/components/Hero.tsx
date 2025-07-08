@@ -150,11 +150,14 @@ export default function Hero() {
               </Button>
             </div>
             
-            {/* Subtle Limited Offer Banner */}
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-12 text-center">
-              <div className="text-gray-600 font-medium text-sm mb-1">Limited Time Offer</div>
-              <div className="text-gray-800 font-medium text-base">Only 10 Strategy Calls Left This Month</div>
-              <div className="text-gray-500 text-sm mt-1">Don't miss out on your chance to land a $200K+ role</div>
+            {/* Enhanced Urgency Banner */}
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-xl p-4 mb-12 text-center shadow-sm">
+              <div className="flex items-center justify-center mb-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></div>
+                <div className="text-red-700 font-semibold text-sm uppercase tracking-wide">Limited Availability</div>
+              </div>
+              <div className="text-gray-800 font-bold text-lg mb-1">Only 7 Strategy Calls Left This Week</div>
+              <div className="text-gray-600 text-sm">Join 500+ professionals who secured $200K+ roles in 2024</div>
             </div>
             
             <div className="flex flex-wrap gap-8 text-sm text-gray-700 font-semibold">

@@ -5,39 +5,65 @@ export default function WhyNotCourses() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-red-600 rounded-full text-sm font-bold text-white mb-6">
+          <div className="section-badge mb-6">
             <X className="w-4 h-4 mr-2" />
             STOP WASTING TIME ON COURSES
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+          <h2 className="heading-2 mb-6">
             Why 97% of Career Courses FAIL
           </h2>
-          <p className="text-xl text-gray-700 font-semibold">
+          <p className="body-text-large">
             (And why we're NOT selling you another one)
           </p>
         </div>
         
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-red-50 border-l-4 border-red-500 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-red-800 mb-4">❌ What Courses Give You:</h3>
-              <ul className="space-y-3 text-red-700">
-                <li>• Generic resume templates</li>
-                <li>• Outdated interview questions</li>
-                <li>• No personalized feedback</li>
-                <li>• Zero networking opportunities</li>
-                <li>• Generic career advice</li>
-                <li>• No salary negotiation help</li>
+            <div className="bg-red-50 border-l-4 border-red-500 p-8 rounded-2xl shadow-sm">
+              <h3 className="heading-3 text-red-800 mb-6">❌ What Courses Give You:</h3>
+              <ul className="space-y-4 text-red-700">
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Generic resume templates that look like everyone else's</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Outdated interview questions from 2019</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Zero personalized feedback or coaching</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-3 mt-1">•</span>
+                  <span className="body-text">No networking opportunities with real hiring managers</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Generic career advice that doesn't work</span>
+                </li>
               </ul>
             </div>
             
-            <div className="bg-green-50 border-l-4 border-green-500 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-green-800 mb-4">✅ What We Give You:</h3>
-              <ul className="space-y-3 text-green-700">
-                <li>• Direct referrals to hiring managers</li>
-                <li>• Real interview questions from this month</li>
-                <li>• 1-on-1 coaching with top tech company veterans</li>
-                <li>• Access to exclusive job networks</li>
+            <div className="bg-green-50 border-l-4 border-green-500 p-8 rounded-2xl shadow-sm">
+              <h3 className="heading-3 text-green-800 mb-6">✅ What We Give You:</h3>
+              <ul className="space-y-4 text-green-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Direct referrals to hiring managers at top companies</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Real interview questions from this month's interviews</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">•</span>
+                  <span className="body-text">1-on-1 coaching with FAANG executives</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Access to exclusive job networks and hidden opportunities</span>
+                </li>
                 <li>• Personalized career strategy</li>
                 <li>• $34K average salary negotiation boost</li>
               </ul>
