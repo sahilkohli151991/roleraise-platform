@@ -92,13 +92,41 @@ export default function Pricing() {
                 ))}
               </ul>
               
-              <div className="paypal-button-container">
+              <div className="payment-buttons-container space-y-3">
                 <PayPalButton 
                   amount={plan.price.toString()}
                   currency="USD"
                   intent="CAPTURE"
                   id={`paypal-button-${plan.name.toLowerCase()}`}
                 />
+                
+                <button 
+                  className="w-full py-3 px-6 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+                  onClick={() => {
+                    alert(`Credit Card payment for ${plan.name} plan ($${plan.price.toLocaleString()}) will be processed securely. This feature is coming soon!`);
+                  }}
+                >
+                  <CreditCard className="w-5 h-5" />
+                  Pay with Credit Card - ${plan.price.toLocaleString()}
+                </button>
+                
+                <button 
+                  className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
+                  onClick={() => {
+                    alert(`Apple Pay for ${plan.name} plan ($${plan.price.toLocaleString()}) will be processed securely. This feature is coming soon!`);
+                  }}
+                >
+                  🍎 Pay with Apple Pay - ${plan.price.toLocaleString()}
+                </button>
+                
+                <button 
+                  className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+                  onClick={() => {
+                    alert(`Google Pay for ${plan.name} plan ($${plan.price.toLocaleString()}) will be processed securely. This feature is coming soon!`);
+                  }}
+                >
+                  🌐 Pay with Google Pay - ${plan.price.toLocaleString()}
+                </button>
               </div>
             </div>
           ))}
