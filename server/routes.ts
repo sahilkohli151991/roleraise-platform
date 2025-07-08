@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertAssessmentSchema } from "@shared/schema";
 import { googleSheetsService } from "./google-sheets";
+import { googleAppsScriptService } from "./google-apps-script";
 import { createPaypalOrder, capturePaypalOrder, loadPaypalDefault } from "./paypal";
 import fs from 'fs';
 import path from 'path';
@@ -35,9 +36,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Store in memory
       const assessment = await storage.createAssessment(validatedData);
       
-      // Also save to Google Sheets
+      // Also save to Google Sheets (try Apps Script first, then fallback to API)
       try {
-        await googleSheetsService.appendAssessment(assessment);
+        if (process.env.GOOGLE_APPS_SCRIPT_URL) {
+          await googleAppsScriptService.appendAssessment(assessment);
+        } else {
+          await googleSheetsService.appendAssessment(assessment);
+        }
       } catch (sheetsError) {
         console.error('Failed to save to Google Sheets:', sheetsError);
         // Continue even if Google Sheets fails
