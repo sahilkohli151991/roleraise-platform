@@ -1,4 +1,4 @@
-import { Code, BarChart3, Rocket, Palette, TrendingUp, Settings, Users } from 'lucide-react';
+import { Code, BarChart3, Rocket, Palette, TrendingUp, Settings, Users, Database, FileText } from 'lucide-react';
 
 export default function CareerTracks() {
   const tracks = [
@@ -43,6 +43,18 @@ export default function CareerTracks() {
       title: "Agile Program Management",
       description: "Scrum Master, Program Manager, Agile Coach",
       salary: "Avg. $165K+"
+    },
+    {
+      icon: <Database className="w-8 h-8 text-primary" />,
+      title: "Data Engineering",
+      description: "Data Engineer, Platform Engineer, ETL Developer",
+      salary: "Avg. $175K+"
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-primary" />,
+      title: "Business Analyst",
+      description: "Business Analyst, Product Analyst, Strategy Analyst",
+      salary: "Avg. $140K+"
     }
   ];
 
@@ -61,7 +73,7 @@ export default function CareerTracks() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {tracks.map((track, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 card-hover">
               <div className="flex justify-center mb-4">
