@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { Heart, Star, TrendingUp } from 'lucide-react';
+import { Heart, Star, TrendingUp, MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface Testimonial {
   id?: number;
@@ -108,6 +109,28 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Discord Community CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
+            <div className="max-w-2xl mx-auto">
+              <MessageSquare className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Join Our Community of Success Stories
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                These are just a few of our many success stories! Connect with hundreds of professionals who've transformed their careers through RoleRaise.
+              </p>
+              <Button 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => window.open('https://discord.gg/roleraise', '_blank')}
+              >
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Join Our Discord Community
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
