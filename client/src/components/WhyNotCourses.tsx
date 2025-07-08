@@ -36,7 +36,7 @@ export default function WhyNotCourses() {
               <ul className="space-y-3 text-green-700">
                 <li>• Direct referrals to hiring managers</li>
                 <li>• Real interview questions from this month</li>
-                <li>• 1-on-1 coaching with FAANG veterans</li>
+                <li>• 1-on-1 coaching with top tech company veterans</li>
                 <li>• Access to exclusive job networks</li>
                 <li>• Personalized career strategy</li>
                 <li>• $34K average salary negotiation boost</li>
@@ -49,7 +49,7 @@ export default function WhyNotCourses() {
               The Truth About Career Success:
             </p>
             <p className="text-xl leading-relaxed">
-              You can find courses on YouTube and Udemy. What you can't find is <strong>direct access to hiring managers at Google, Meta, and Amazon</strong> who will personally refer you and coach you through the process.
+              You can find courses on YouTube and Udemy. What you can't find is <strong>direct access to hiring managers at Google, Meta, Amazon, Uber, Stripe, and other top tech companies</strong> who will personally refer you and coach you through the process.
             </p>
           </div>
         </div>

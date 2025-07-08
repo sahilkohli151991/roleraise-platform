@@ -2,13 +2,13 @@ import { Star, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function SocialProof() {
   const companies = [
-    'Google', 'Meta', 'Amazon', 'Netflix', 'Apple', 'Microsoft', 'Uber', 'Airbnb'
+    'Google', 'Meta', 'Amazon', 'Netflix', 'Apple', 'Microsoft', 'Uber', 'Airbnb', 'Stripe', 'Salesforce', 'Tesla', 'Spotify'
   ];
 
   const recentSuccess = [
-    { name: 'Sarah K.', role: 'Got $240K at Google', time: '3 days ago' },
-    { name: 'Mike R.', role: 'Landed $190K at Meta', time: '1 week ago' },
-    { name: 'Jessica L.', role: 'Secured $220K at Amazon', time: '2 weeks ago' },
+    { name: 'Sarah K.', role: 'Data Scientist $240K at Google', time: '3 days ago' },
+    { name: 'Mike R.', role: 'Product Manager $190K at Uber', time: '1 week ago' },
+    { name: 'Jessica L.', role: 'Program Manager $220K at Stripe', time: '2 weeks ago' },
   ];
 
   return (

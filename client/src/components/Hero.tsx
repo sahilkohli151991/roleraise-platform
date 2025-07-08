@@ -75,7 +75,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-2xl text-gray-700 mb-6 font-semibold">
-              Stop applying to hundreds of jobs. Get direct referrals to $200K+ roles at Google, Meta, Amazon & Netflix.
+              Stop applying to hundreds of jobs. Get direct referrals to $200K+ roles at top tech companies like Google, Meta, Amazon, Netflix, Uber, Airbnb, and more.
             </p>
             
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">

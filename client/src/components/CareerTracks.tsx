@@ -1,4 +1,4 @@
-import { Code, BarChart3, Rocket, Palette, TrendingUp, Settings } from 'lucide-react';
+import { Code, BarChart3, Rocket, Palette, TrendingUp, Settings, Users } from 'lucide-react';
 
 export default function CareerTracks() {
   const tracks = [
@@ -10,9 +10,9 @@ export default function CareerTracks() {
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-primary" />,
-      title: "Data & Analytics", 
-      description: "Data Sci, ML Eng, Analytics",
-      salary: "Avg. $170K+"
+      title: "Data Science", 
+      description: "Data Scientist, ML Engineer, Research Scientist",
+      salary: "Avg. $180K+"
     },
     {
       icon: <Rocket className="w-8 h-8 text-primary" />,
@@ -37,6 +37,12 @@ export default function CareerTracks() {
       title: "Engineering Leadership",
       description: "Tech Lead, Eng Manager",
       salary: "Avg. $220K+"
+    },
+    {
+      icon: <Users className="w-8 h-8 text-primary" />,
+      title: "Agile Program Management",
+      description: "Scrum Master, Program Manager, Agile Coach",
+      salary: "Avg. $165K+"
     }
   ];
 
