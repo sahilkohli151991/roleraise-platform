@@ -1,47 +1,22 @@
 import { Star, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function SocialProof() {
-  const companies = [
-    'Google', 'Meta', 'Amazon', 'Netflix', 'Apple', 'Microsoft', 'Uber', 'Airbnb', 'Stripe', 'Salesforce', 'Tesla', 'Spotify'
-  ];
-
-  const recentSuccess = [
-    { name: 'Sarah K.', role: 'Data Scientist $240K at Google', time: '3 days ago' },
-    { name: 'Mike R.', role: 'Product Manager $190K at Uber', time: '1 week ago' },
-    { name: 'Jessica L.', role: 'Program Manager $220K at Stripe', time: '2 weeks ago' },
+  // Companies where our clients now work (based on testimonials)
+  const clientCompanies = [
+    'Meta', 'Apptad', 'RetailStat', 'Innovaccer', 'Commonwealth Bank', 
+    'KPMG', 'BeOne Medicines', 'Google', 'Amazon', 'Microsoft', 'Uber', 'Stripe'
   ];
 
   return (
     <section className="py-16 bg-gradient-to-r from-green-50 to-blue-50 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Recent Success Feed */}
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">🔥 Recent Success Stories</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {recentSuccess.map((success, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                <div className="flex items-center mb-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Award className="w-5 h-5 text-white" />
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-bold text-gray-900">{success.name}</p>
-                    <p className="text-sm text-gray-500">{success.time}</p>
-                  </div>
-                </div>
-                <p className="text-green-600 font-semibold">{success.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Company Logos */}
         <div className="text-center mb-12">
-          <p className="text-gray-600 font-semibold mb-6">Our clients now work at:</p>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {companies.map((company, index) => (
-              <div key={index} className="text-2xl font-bold text-gray-400 hover:text-gray-600 transition-colors">
-                {company}
+          <p className="text-gray-600 font-semibold mb-8">Our clients now work at:</p>
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {clientCompanies.map((company, index) => (
+              <div key={index} className="px-6 py-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <span className="text-lg font-bold text-gray-700">{company}</span>
               </div>
             ))}
           </div>
