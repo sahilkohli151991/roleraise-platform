@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { LogoWithText } from './Logo';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +23,8 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-black text-gray-900">
-              <span className="text-primary">Role</span>Raise
+            <a href="#" className="flex items-center">
+              <LogoWithText size="md" />
             </a>
           </div>
           

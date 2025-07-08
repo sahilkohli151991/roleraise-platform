@@ -1,5 +1,7 @@
 import { Twitter, Linkedin } from 'lucide-react';
 
+import { LogoWithText } from './Logo';
+
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,8 +16,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <div className="text-3xl font-black mb-4">
-              <span className="text-primary">Role</span>Raise
+            <div className="mb-4">
+              <LogoWithText size="md" className="text-white" />
             </div>
             <p className="text-gray-400 mb-6">
               Helping professionals land $200K+ tech roles with proven mentorship and strategies.
