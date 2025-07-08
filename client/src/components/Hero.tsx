@@ -1,276 +1,261 @@
 import { useState } from 'react';
-import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { CheckCircle, TrendingUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { insertAssessmentSchema } from '@shared/schema';
+import { apiRequest } from '@/lib/queryClient';
+import type { InsertAssessment } from '@shared/schema';
 
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    currentRole: '',
-    experience: '',
-    salary: '',
-    targetSalary: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  const form = useForm<InsertAssessment>({
+    resolver: zodResolver(insertAssessmentSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      currentRole: '',
+      experience: '',
+      currentSalary: '',
+      targetSalary: '',
+    },
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('/api/assessment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        toast({
-          title: "Assessment Submitted!",
-          description: "Thank you! We'll be in touch soon with your personalized roadmap.",
-        });
-        setFormData({
-          name: '',
-          email: '',
-          currentRole: '',
-          experience: '',
-          salary: '',
-          targetSalary: ''
-        });
-      } else {
-        throw new Error(result.message || 'Something went wrong');
-      }
-    } catch (error) {
+  const assessmentMutation = useMutation({
+    mutationFn: (data: InsertAssessment) => apiRequest('/api/assessments', 'POST', data),
+    onSuccess: () => {
+      setIsSubmitted(true);
       toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "Failed to submit assessment. Please try again.",
+        title: "Assessment submitted successfully!",
+        description: "We'll be in touch within 24 hours to discuss your career goals.",
+      });
+      queryClient.invalidateQueries({ queryKey: ['/api/assessments'] });
+    },
+    onError: (error) => {
+      console.error('Assessment submission failed:', error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact support.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
-    }
+    },
+  });
+
+  const onSubmit = (data: InsertAssessment) => {
+    assessmentMutation.mutate(data);
   };
 
-  const scrollToAssessment = () => {
-    const element = document.getElementById('assessment');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToBookCall = () => {
-    const element = document.getElementById('book-call');
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="pt-20 pb-16 bg-gray-50">
+    <section id="hero" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Hero Content */}
-          <div className="animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 bg-beige rounded-full text-sm font-semibold text-gray-900 mb-6">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              500+ Professionals Transformed
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="inline-flex items-center px-4 py-2 bg-beige rounded-full text-sm font-semibold text-black mb-6">
+              ⚡ 500+ Tech Professionals Hired This Year
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-              Land Your <span className="text-primary">$200K+ Tech Role</span> in 90 Days
+            <h1 className="text-4xl md:text-6xl font-black text-black mb-6 leading-tight">
+              Land Your $200K+ Tech Role in 90 Days
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Join <strong className="text-gray-900">500+ professionals</strong> who've doubled their salaries. Get 1-on-1 mentorship from executives at Google, Meta, Amazon & 100+ top companies. <strong className="text-gray-900">92% interview success rate.</strong>
+              <strong className="text-black">We are not selling any course — we're your career transformation partners.</strong>
             </p>
             
-            {/* Stats */}
-            <div className="flex flex-wrap gap-8 mb-8">
-              <div className="text-left">
-                <div className="text-3xl font-black text-primary">500+</div>
-                <div className="text-sm text-gray-600 font-semibold">Success Stories</div>
-              </div>
+            <div className="flex flex-wrap gap-12 mb-10">
               <div className="text-left">
                 <div className="text-3xl font-black text-primary">92%</div>
-                <div className="text-sm text-gray-600 font-semibold">Interview Success</div>
+                <div className="text-sm text-gray-600 font-semibold">Interview Success Rate</div>
               </div>
               <div className="text-left">
-                <div className="text-3xl font-black text-primary">$200K+</div>
-                <div className="text-sm text-gray-600 font-semibold">Average Salary</div>
+                <div className="text-3xl font-black text-primary">$34K</div>
+                <div className="text-sm text-gray-600 font-semibold">Avg. Negotiation Boost</div>
+              </div>
+              <div className="text-left">
+                <div className="text-3xl font-black text-primary">6 Weeks</div>
+                <div className="text-sm text-gray-600 font-semibold">Average Time to Offer</div>
               </div>
             </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button 
-                onClick={scrollToAssessment}
-                className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors inline-flex items-center justify-center"
+            <div className="flex flex-wrap gap-4 mb-10">
+              <Button 
+                onClick={() => scrollToSection('book-call')}
+                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
               >
-                Start Assessment
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button 
-                onClick={scrollToBookCall}
-                className="bg-white text-gray-700 px-8 py-4 rounded-lg font-semibold border-2 border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all inline-flex items-center justify-center"
+                🚀 Book Free Strategy Call
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => scrollToSection('testimonials')}
+                className="px-8 py-4 text-lg font-semibold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-300"
               >
-                Book Free Call
-                <Phone className="w-5 h-5 ml-2" />
-              </button>
+                📊 See Success Stories
+              </Button>
             </div>
             
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 font-semibold">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                Money-Back Guarantee
+            <div className="flex flex-wrap gap-6 text-sm text-gray-700 font-semibold">
+              <div className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                No upfront payment
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                No Risk, All Reward
+              <div className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                90-day guarantee
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                Start Today
+              <div className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                FAANG mentors
               </div>
             </div>
           </div>
           
-          {/* Assessment Form */}
-          <div id="assessment" className="animate-slide-up">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Free Career Assessment</h3>
-                <p className="text-gray-600">Get your personalized roadmap to $200K+</p>
-              </div>
+          <div>
+            <Card className="shadow-2xl border border-gray-200 bg-white rounded-2xl">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-2xl font-black text-gray-900">
+                  {isSubmitted ? 'Thank You!' : 'Get Your Free Career Assessment'}
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  {isSubmitted ? 'We\'ll be in touch within 24 hours' : 'Discover your path to a $200K+ tech role'}
+                </CardDescription>
+              </CardHeader>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                  <input 
-                    type="text" 
-                    name="name" 
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
-                    placeholder="Enter your email"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Current Role</label>
-                  <select 
-                    name="currentRole" 
-                    value={formData.currentRole}
-                    onChange={handleInputChange}
-                    required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Select your current role</option>
-                    <option value="software-engineer">Software Engineer</option>
-                    <option value="product-manager">Product Manager</option>
-                    <option value="data-scientist">Data Scientist</option>
-                    <option value="engineering-manager">Engineering Manager</option>
-                    <option value="designer">Designer</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Years of Experience</label>
-                  <select 
-                    name="experience" 
-                    value={formData.experience}
-                    onChange={handleInputChange}
-                    required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Select experience level</option>
-                    <option value="0-2">0-2 years</option>
-                    <option value="3-5">3-5 years</option>
-                    <option value="6-10">6-10 years</option>
-                    <option value="10+">10+ years</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Current Salary Range</label>
-                  <select 
-                    name="salary" 
-                    value={formData.salary}
-                    onChange={handleInputChange}
-                    required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Select salary range</option>
-                    <option value="50-75k">$50K - $75K</option>
-                    <option value="75-100k">$75K - $100K</option>
-                    <option value="100-150k">$100K - $150K</option>
-                    <option value="150-200k">$150K - $200K</option>
-                    <option value="200k+">$200K+</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Target Salary</label>
-                  <select 
-                    name="targetSalary" 
-                    value={formData.targetSalary}
-                    onChange={handleInputChange}
-                    required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Select target salary</option>
-                    <option value="100-150k">$100K - $150K</option>
-                    <option value="150-200k">$150K - $200K</option>
-                    <option value="200-300k">$200K - $300K</option>
-                    <option value="300k+">$300K+</option>
-                  </select>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Get My Assessment'}
-                </button>
-              </form>
-              
-              <div className="flex justify-center items-center gap-4 mt-6">
-                <div className="flex items-center gap-2 bg-mint px-3 py-1 rounded-full">
-                  <CheckCircle className="w-4 h-4 text-gray-900" />
-                  <span className="text-xs font-semibold text-gray-900">100% Free</span>
-                </div>
-                <div className="flex items-center gap-2 bg-mint px-3 py-1 rounded-full">
-                  <CheckCircle className="w-4 h-4 text-gray-900" />
-                  <span className="text-xs font-semibold text-gray-900">No Spam</span>
-                </div>
-              </div>
-            </div>
+              <CardContent className="px-8 pb-8">
+                {isSubmitted ? (
+                  <div className="text-center py-8">
+                    <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                    <p className="text-lg font-semibold text-gray-900 mb-2">Assessment Submitted Successfully!</p>
+                    <p className="text-gray-600">Our team will review your information and contact you within 24 hours to discuss your career goals.</p>
+                  </div>
+                ) : (
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-gray-700 font-semibold">Full Name</FormLabel>
+                              <FormControl>
+                                <Input placeholder="John Doe" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-gray-700 font-semibold">Email Address</FormLabel>
+                              <FormControl>
+                                <Input type="email" placeholder="john@example.com" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                      
+                      <FormField
+                        control={form.control}
+                        name="currentRole"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-gray-700 font-semibold">Current Role</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Software Engineer" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="experience"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-gray-700 font-semibold">Years of Experience</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger className="border-gray-300 focus:border-primary focus:ring-primary">
+                                  <SelectValue placeholder="Select experience level" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="1-2">1-2 years</SelectItem>
+                                <SelectItem value="3-5">3-5 years</SelectItem>
+                                <SelectItem value="6-10">6-10 years</SelectItem>
+                                <SelectItem value="10+">10+ years</SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="currentSalary"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-gray-700 font-semibold">Current Salary</FormLabel>
+                              <FormControl>
+                                <Input placeholder="$120,000" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="targetSalary"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-gray-700 font-semibold">Target Salary</FormLabel>
+                              <FormControl>
+                                <Input placeholder="$200,000" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                      
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-primary hover:bg-primary-dark text-white py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
+                        disabled={assessmentMutation.isPending}
+                      >
+                        {assessmentMutation.isPending ? 'Submitting...' : 'Get My Free Assessment'}
+                      </Button>
+                    </form>
+                  </Form>
+                )}
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

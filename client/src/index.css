@@ -273,3 +273,37 @@
 .calendly-inline-widget:empty + .calendly-fallback {
   display: block;
 }
+
+/* Professional Typography Enhancement */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+/* Professional components */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-dark transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1;
+}
+
+.section-badge {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-black text-black mb-6;
+}
+
+.section-subtitle {
+  @apply text-xl text-gray-600 max-w-3xl mx-auto;
+}
+
+/* Enhanced body styling */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
