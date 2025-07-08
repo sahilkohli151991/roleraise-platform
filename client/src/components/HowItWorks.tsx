@@ -28,13 +28,13 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="section-badge mb-6">
+          <div className="section-badge mb-8">
             <Zap className="w-4 h-4 mr-2" />
-            The Process
+            Our Process
           </div>
-          <h2 className="heading-2 mb-6">How It Works</h2>
-          <p className="body-text-large max-w-3xl mx-auto">
-            Our proven 4-step system has helped 500+ professionals land their dream roles at top tech companies
+          <h2 className="heading-2 mb-6">How We Transform Your Career</h2>
+          <p className="body-text-large">
+            Our proven 4-step system has helped 500+ professionals land $200K+ roles
           </p>
         </div>
         

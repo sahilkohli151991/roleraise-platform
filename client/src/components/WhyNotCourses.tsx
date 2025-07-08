@@ -64,8 +64,14 @@ export default function WhyNotCourses() {
                   <span className="text-green-500 mr-3 mt-1">•</span>
                   <span className="body-text">Access to exclusive job networks and hidden opportunities</span>
                 </li>
-                <li>• Personalized career strategy</li>
-                <li>• $34K average salary negotiation boost</li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">•</span>
+                  <span className="body-text">Personalized career strategy tailored to your goals</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">•</span>
+                  <span className="body-text">$34K average salary negotiation boost</span>
+                </li>
               </ul>
             </div>
           </div>

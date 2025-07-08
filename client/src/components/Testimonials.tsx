@@ -78,7 +78,7 @@ export default function Testimonials() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card group">
+            <div key={index} className="testimonial-card group card-hover animate-fade-in-scale">
               <div className="flex items-center mb-6">
                 <img 
                   src={testimonial.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=5046E5&color=fff&size=64`}
@@ -86,14 +86,14 @@ export default function Testimonials() {
                   className="w-16 h-16 rounded-full mr-4 object-cover ring-4 ring-white shadow-lg"
                 />
                 <div>
-                  <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
-                  <p className="text-gray-600 font-medium">{testimonial.role} @ {testimonial.company}</p>
+                  <h4 className="heading-4 text-gray-900">{testimonial.name}</h4>
+                  <p className="body-text text-gray-600 font-medium">{testimonial.role} @ {testimonial.company}</p>
                   {testimonial.location && (
                     <p className="text-gray-500 text-sm">{testimonial.location}</p>
                   )}
                 </div>
               </div>
-              <p className="text-gray-700 mb-6 leading-relaxed text-lg">"{testimonial.content}"</p>
+              <p className="body-text text-gray-700 mb-6 leading-relaxed">"{testimonial.content}"</p>
               <div className="flex items-center justify-between">
                 <div className="flex text-yellow-400">
                   {[...Array(testimonial.rating || 5)].map((_, i) => (
