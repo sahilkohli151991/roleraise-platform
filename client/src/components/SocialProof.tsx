@@ -1,11 +1,6 @@
 import { Star, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function SocialProof() {
-  // Companies where our clients now work (based on testimonials)
-  const clientCompanies = [
-    'Meta', 'Apptad', 'RetailStat', 'Innovaccer', 'Commonwealth Bank', 
-    'KPMG', 'BeOne Medicines', 'Google', 'Amazon', 'Microsoft', 'Uber', 'Stripe'
-  ];
 
   return (
     <section className="py-16 bg-gradient-to-r from-green-50 to-blue-50 border-y border-gray-200">
@@ -13,12 +8,88 @@ export default function SocialProof() {
         {/* Company Logos */}
         <div className="text-center mb-12">
           <p className="text-gray-600 font-semibold mb-8">Our clients now work at:</p>
-          <div className="flex flex-wrap justify-center items-center gap-6">
-            {clientCompanies.map((company, index) => (
-              <div key={index} className="px-6 py-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <span className="text-lg font-bold text-gray-700">{company}</span>
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/Google_Logo_1.png"
+                  alt="Google"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
               </div>
-            ))}
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/Meta_idlf4cVSsS_1.png"
+                  alt="Meta"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/Amazon_Logo_1.png"
+                  alt="Amazon"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/Netflix_Logo_1.png"
+                  alt="Netflix"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/Stripe_Logo_1.png"
+                  alt="Stripe"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/KPMG_id9tLD2YU7_1.png"
+                  alt="KPMG"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/X_idJxGuURW1_1.png"
+                  alt="X"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/Innovaccer_id6-tvzgdK_1.png"
+                  alt="Innovaccer"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-sm border border-gray-200 p-3">
+                <img 
+                  src="/attached_assets/BeOne Medicines_idjdyMFja5_1.png"
+                  alt="BeOne Medicines"
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
