@@ -13,30 +13,30 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(220, 85%, 57%);
+  --primary: hsl(210, 40%, 20%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(215, 25%, 27%);
-  --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(215, 20%, 65%);
+  --secondary: hsl(210, 15%, 85%);
+  --secondary-foreground: hsl(210, 40%, 20%);
+  --accent: hsl(210, 20%, 60%);
   --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(215, 25%, 27%);
+  --ring: hsl(210, 40%, 20%);
   --radius: 0.5rem;
 
-  /* Professional Color Palette */
-  --primary-dark: hsl(220, 90%, 50%);
-  --primary-light: hsl(220, 80%, 65%);
+  /* Professional Monochromatic Palette */
+  --primary-dark: hsl(210, 50%, 15%);
+  --primary-light: hsl(210, 30%, 40%);
   
-  /* Professional Card Colors */
-  --mint: hsl(160, 50%, 45%);
-  --purple: hsl(220, 85%, 57%);
-  --coral: hsl(16, 75%, 55%);
-  --pink: hsl(330, 45%, 60%);
-  --beige: hsl(45, 30%, 75%);
-  --sky: hsl(200, 70%, 55%);
-  --orange: hsl(25, 85%, 60%);
-  --green: hsl(140, 60%, 45%);
+  /* Subtle Professional Card Colors */
+  --mint: hsl(210, 20%, 50%);
+  --purple: hsl(210, 25%, 45%);
+  --coral: hsl(210, 15%, 55%);
+  --pink: hsl(210, 20%, 60%);
+  --beige: hsl(210, 10%, 70%);
+  --sky: hsl(210, 25%, 50%);
+  --orange: hsl(210, 15%, 50%);
+  --green: hsl(210, 20%, 45%);
   
   /* Neutrals */
   --black: hsl(0, 0%, 0%);
@@ -131,17 +131,17 @@
   }
   
   .testimonial-card {
-    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(220, 20%, 96%) 100%);
-    border: 1px solid hsl(220, 20%, 90%);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(210, 10%, 96%) 100%);
+    border: 1px solid hsl(210, 10%, 85%);
   }
   
   .mentor-card {
-    background: linear-gradient(135deg, hsl(220, 20%, 96%) 0%, hsl(0, 0%, 100%) 100%);
-    border: 1px solid hsl(220, 20%, 90%);
+    background: linear-gradient(135deg, hsl(210, 10%, 96%) 0%, hsl(0, 0%, 100%) 100%);
+    border: 1px solid hsl(210, 10%, 85%);
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(220, 85%, 57%) 0%, hsl(215, 25%, 27%) 50%, hsl(200, 70%, 55%) 100%);
+    background: linear-gradient(135deg, hsl(210, 40%, 20%) 0%, hsl(210, 30%, 30%) 50%, hsl(210, 20%, 60%) 100%);
   }
   
   .animate-fade-in {
@@ -153,75 +153,75 @@
   }
   
   .primary {
-    color: hsl(220, 85%, 57%);
+    color: hsl(210, 40%, 20%);
   }
   
   .primary-dark {
-    color: hsl(220, 90%, 50%);
+    color: hsl(210, 50%, 15%);
   }
   
   .mint {
-    color: hsl(160, 50%, 45%);
+    color: hsl(210, 20%, 50%);
   }
   
   .purple {
-    color: hsl(220, 85%, 57%);
+    color: hsl(210, 25%, 45%);
   }
   
   .coral {
-    color: hsl(16, 75%, 55%);
+    color: hsl(210, 15%, 55%);
   }
   
   .pink {
-    color: hsl(330, 45%, 60%);
+    color: hsl(210, 20%, 60%);
   }
   
   .beige {
-    color: hsl(45, 30%, 75%);
+    color: hsl(210, 10%, 70%);
   }
   
   .sky {
-    color: hsl(200, 70%, 55%);
+    color: hsl(210, 25%, 50%);
   }
   
   .orange {
-    color: hsl(25, 85%, 60%);
+    color: hsl(210, 15%, 50%);
   }
   
   .green {
-    color: hsl(140, 60%, 45%);
+    color: hsl(210, 20%, 45%);
   }
   
   .bg-primary {
-    background-color: hsl(220, 85%, 57%);
+    background-color: hsl(210, 40%, 20%);
   }
   
   .bg-primary-dark {
-    background-color: hsl(220, 90%, 50%);
+    background-color: hsl(210, 50%, 15%);
   }
   
   .bg-mint {
-    background-color: hsl(160, 50%, 45%);
+    background-color: hsl(210, 20%, 50%);
   }
   
   .bg-purple {
-    background-color: hsl(220, 85%, 57%);
+    background-color: hsl(210, 25%, 45%);
   }
   
   .bg-coral {
-    background-color: hsl(16, 75%, 55%);
+    background-color: hsl(210, 15%, 55%);
   }
   
   .bg-pink {
-    background-color: hsl(330, 45%, 60%);
+    background-color: hsl(210, 20%, 60%);
   }
   
   .bg-beige {
-    background-color: hsl(45, 30%, 75%);
+    background-color: hsl(210, 10%, 70%);
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, hsl(220, 85%, 57%) 0%, hsl(215, 25%, 27%) 100%);
+    background: linear-gradient(135deg, hsl(210, 40%, 20%) 0%, hsl(210, 30%, 30%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
