@@ -1,5 +1,6 @@
 import Navigation from './Navigation';
 import Hero from './Hero';
+import SocialProof from './SocialProof';
 import HowItWorks from './HowItWorks';
 import CareerTransformation from './CareerTransformation';
 import Testimonials from './Testimonials';
@@ -17,15 +18,16 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <HowItWorks />
-      <CareerTransformation />
-      <Testimonials />
-      <Mentors />
-      <CareerTracks />
-      <FAQ />
-      <Guarantee />
+      <SocialProof />
       <WhyNotCourses />
+      <HowItWorks />
+      <Testimonials />
+      <CareerTransformation />
+      <Mentors />
       <Pricing />
+      <Guarantee />
+      <FAQ />
+      <CareerTracks />
       <BookCall />
       <Footer />
     </div>

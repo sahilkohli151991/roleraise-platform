@@ -49,10 +49,15 @@ export default function Pricing() {
             <CreditCard className="w-4 h-4 mr-2" />
             Investment Options
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Choose Your Path to Success</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Invest in your future with our proven program. Average ROI: 400% within 90 days
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Your $200K+ Career Investment</h2>
+          <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto">
+            Choose the fastest path to your dream role. Average ROI: 400% within 90 days
           </p>
+          <div className="mt-6 bg-yellow-100 border border-yellow-400 rounded-lg p-4 inline-block">
+            <p className="text-yellow-800 font-bold">
+              ⚡ Early Bird Pricing - Save $2,000 (Only 15 spots left)
+            </p>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
