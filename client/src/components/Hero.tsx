@@ -62,63 +62,63 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="hero" className="py-32 gradient-hero relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <div className="inline-flex items-center px-4 py-2 bg-beige rounded-full text-sm font-semibold text-black mb-6">
+            <div className="section-badge mb-8">
               ⚡ 500+ Tech Professionals Hired This Year
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-black text-black mb-6 leading-tight">
+            <h1 className="section-title">
               Land Your $200K+ Tech Role in 90 Days
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="section-subtitle mb-10">
               <strong className="text-black">We are not selling any course — we're your career transformation partners.</strong>
             </p>
             
-            <div className="flex flex-wrap gap-12 mb-10">
+            <div className="flex flex-wrap gap-12 mb-12">
               <div className="text-left">
-                <div className="text-3xl font-black text-primary">92%</div>
+                <div className="text-4xl font-black text-primary mb-2">92%</div>
                 <div className="text-sm text-gray-600 font-semibold">Interview Success Rate</div>
               </div>
               <div className="text-left">
-                <div className="text-3xl font-black text-primary">$34K</div>
+                <div className="text-4xl font-black text-primary mb-2">$34K</div>
                 <div className="text-sm text-gray-600 font-semibold">Avg. Negotiation Boost</div>
               </div>
               <div className="text-left">
-                <div className="text-3xl font-black text-primary">6 Weeks</div>
+                <div className="text-4xl font-black text-primary mb-2">6 Weeks</div>
                 <div className="text-sm text-gray-600 font-semibold">Average Time to Offer</div>
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4 mb-12">
               <Button 
                 onClick={() => scrollToSection('book-call')}
-                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
+                className="btn-primary px-10 py-4 text-lg font-bold rounded-2xl"
               >
                 🚀 Book Free Strategy Call
               </Button>
               <Button 
                 variant="outline"
                 onClick={() => scrollToSection('testimonials')}
-                className="px-8 py-4 text-lg font-semibold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-300"
+                className="px-10 py-4 text-lg font-bold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-2xl transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
               >
                 📊 See Success Stories
               </Button>
             </div>
             
-            <div className="flex flex-wrap gap-6 text-sm text-gray-700 font-semibold">
-              <div className="flex items-center">
+            <div className="flex flex-wrap gap-8 text-sm text-gray-700 font-semibold">
+              <div className="flex items-center status-indicator status-success">
                 <span className="text-green-500 mr-2">✓</span>
                 No upfront payment
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center status-indicator status-success">
                 <span className="text-green-500 mr-2">✓</span>
                 90-day guarantee
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center status-indicator status-success">
                 <span className="text-green-500 mr-2">✓</span>
                 FAANG mentors
               </div>
@@ -126,22 +126,22 @@ export default function Hero() {
           </div>
           
           <div>
-            <Card className="shadow-2xl border border-gray-200 bg-white rounded-2xl">
+            <Card className="glass-effect rounded-3xl border-2 border-white/20 shadow-2xl">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-2xl font-black text-gray-900">
+                <CardTitle className="text-3xl font-black text-gray-900 mb-2">
                   {isSubmitted ? 'Thank You!' : 'Get Your Free Career Assessment'}
                 </CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardDescription className="text-gray-600 text-lg">
                   {isSubmitted ? 'We\'ll be in touch within 24 hours' : 'Discover your path to a $200K+ tech role'}
                 </CardDescription>
               </CardHeader>
               
               <CardContent className="px-8 pb-8">
                 {isSubmitted ? (
-                  <div className="text-center py-8">
-                    <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                    <p className="text-lg font-semibold text-gray-900 mb-2">Assessment Submitted Successfully!</p>
-                    <p className="text-gray-600">Our team will review your information and contact you within 24 hours to discuss your career goals.</p>
+                  <div className="text-center py-8 success-animation">
+                    <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
+                    <p className="text-xl font-bold text-gray-900 mb-3">Assessment Submitted Successfully!</p>
+                    <p className="text-gray-600 text-lg leading-relaxed">Our team will review your information and contact you within 24 hours to discuss your career goals.</p>
                   </div>
                 ) : (
                   <Form {...form}>
@@ -152,9 +152,9 @@ export default function Hero() {
                           name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-gray-700 font-semibold">Full Name</FormLabel>
+                              <FormLabel className="text-gray-700 font-bold">Full Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="John Doe" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                                <Input placeholder="John Doe" {...field} className="premium-input" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -166,9 +166,9 @@ export default function Hero() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-gray-700 font-semibold">Email Address</FormLabel>
+                              <FormLabel className="text-gray-700 font-bold">Email Address</FormLabel>
                               <FormControl>
-                                <Input type="email" placeholder="john@example.com" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                                <Input type="email" placeholder="john@example.com" {...field} className="premium-input" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -181,9 +181,9 @@ export default function Hero() {
                         name="currentRole"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-700 font-semibold">Current Role</FormLabel>
+                            <FormLabel className="text-gray-700 font-bold">Current Role</FormLabel>
                             <FormControl>
-                              <Input placeholder="Software Engineer" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                              <Input placeholder="Software Engineer" {...field} className="premium-input" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -195,10 +195,10 @@ export default function Hero() {
                         name="experience"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-700 font-semibold">Years of Experience</FormLabel>
+                            <FormLabel className="text-gray-700 font-bold">Years of Experience</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                               <FormControl>
-                                <SelectTrigger className="border-gray-300 focus:border-primary focus:ring-primary">
+                                <SelectTrigger className="premium-input">
                                   <SelectValue placeholder="Select experience level" />
                                 </SelectTrigger>
                               </FormControl>
@@ -220,9 +220,9 @@ export default function Hero() {
                           name="currentSalary"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-gray-700 font-semibold">Current Salary</FormLabel>
+                              <FormLabel className="text-gray-700 font-bold">Current Salary</FormLabel>
                               <FormControl>
-                                <Input placeholder="$120,000" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                                <Input placeholder="$120,000" {...field} className="premium-input" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -234,9 +234,9 @@ export default function Hero() {
                           name="targetSalary"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-gray-700 font-semibold">Target Salary</FormLabel>
+                              <FormLabel className="text-gray-700 font-bold">Target Salary</FormLabel>
                               <FormControl>
-                                <Input placeholder="$200,000" {...field} className="border-gray-300 focus:border-primary focus:ring-primary" />
+                                <Input placeholder="$200,000" {...field} className="premium-input" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -246,7 +246,7 @@ export default function Hero() {
                       
                       <Button 
                         type="submit" 
-                        className="w-full bg-primary hover:bg-primary-dark text-white py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
+                        className="btn-primary w-full py-6 text-xl font-bold rounded-2xl"
                         disabled={assessmentMutation.isPending}
                       >
                         {assessmentMutation.isPending ? 'Submitting...' : 'Get My Free Assessment'}

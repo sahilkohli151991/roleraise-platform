@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Heart, Star } from 'lucide-react';
+import { Heart, Star, TrendingUp } from 'lucide-react';
 
 interface Testimonial {
   id?: number;
@@ -61,34 +61,34 @@ export default function Testimonials() {
   }
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-coral rounded-full text-sm font-semibold text-white mb-6">
+        <div className="text-center mb-20">
+          <div className="section-badge mb-8">
             <Heart className="w-4 h-4 mr-2" />
             Success Stories
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">What Our Members Say</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="section-title">What Our Members Say</h2>
+          <p className="section-subtitle">
             Join hundreds of professionals who've transformed their careers and doubled their salaries
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div key={index} className="testimonial-card group">
               <div className="flex items-center mb-6">
                 <img 
                   src={testimonial.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=5046E5&color=fff&size=64`}
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mr-4 object-cover"
+                  className="w-16 h-16 rounded-full mr-4 object-cover ring-4 ring-white shadow-lg"
                 />
                 <div>
-                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-gray-600">{testimonial.role} @ {testimonial.company}</p>
+                  <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
+                  <p className="text-gray-600 font-medium">{testimonial.role} @ {testimonial.company}</p>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4">"{testimonial.content}"</p>
+              <p className="text-gray-700 mb-6 leading-relaxed text-lg">"{testimonial.content}"</p>
               <div className="flex items-center justify-between">
                 <div className="flex text-yellow-400">
                   {[...Array(testimonial.rating || 5)].map((_, i) => (
@@ -96,7 +96,10 @@ export default function Testimonials() {
                   ))}
                 </div>
                 {testimonial.salaryIncrease && (
-                  <span className="text-green-500 font-semibold">{testimonial.salaryIncrease}</span>
+                  <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-gradient-to-r from-green-100 to-green-50 text-green-800 border border-green-200">
+                    <TrendingUp className="w-4 h-4 mr-1" />
+                    {testimonial.salaryIncrease}
+                  </div>
                 )}
               </div>
             </div>
