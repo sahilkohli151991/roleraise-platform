@@ -46,14 +46,14 @@ export default function BookCall() {
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Ready to Transform Your Career?</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Book a free 30-minute strategy call to discuss your career goals and see if RoleRaise is right for you.
+            Schedule call with RoleRaise to discuss your career goals and see if our program is right for you.
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8">
             <div className="text-center mb-8">
-              <p className="text-gray-600 mb-6">Schedule your free strategy call below:</p>
+              <p className="text-gray-600 mb-6">Schedule call with RoleRaise below:</p>
             </div>
             
             {/* Calendly Inline Widget */}
@@ -76,7 +76,7 @@ export default function BookCall() {
                 className="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Open in Popup
+                Schedule Call with RoleRaise
               </button>
             </div>
             

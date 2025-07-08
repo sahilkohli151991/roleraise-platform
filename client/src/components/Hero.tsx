@@ -48,7 +48,7 @@ export default function Hero() {
       setIsSubmitted(true);
       toast({
         title: "Assessment submitted successfully!",
-        description: "We'll be in touch within 24 hours to discuss your career goals.",
+        description: "RoleRaise will be in touch within 24 hours to discuss your career goals.",
       });
       queryClient.invalidateQueries({ queryKey: ['/api/assessment'] });
     },
@@ -129,7 +129,7 @@ export default function Hero() {
                 }}
                 className="btn-primary px-12 py-6 text-xl font-black rounded-2xl relative overflow-hidden group"
               >
-                <span className="relative z-10">🚀 BOOK FREE STRATEGY CALL</span>
+                <span className="relative z-10">🚀 SCHEDULE CALL WITH ROLERAISE</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
               <Button 
