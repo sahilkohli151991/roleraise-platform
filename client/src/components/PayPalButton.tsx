@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PayPalButtonProps {
   amount: string;
@@ -7,184 +7,100 @@ interface PayPalButtonProps {
   id?: string;
 }
 
-// Global state to prevent multiple SDK loads
-let paypalSDKLoaded = false;
-let paypalSDKLoading = false;
-
 export default function PayPalButton({
   amount,
   currency,
   intent,
   id = "paypal-button",
 }: PayPalButtonProps) {
+  const [isPayPalReady, setIsPayPalReady] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [isConfigured, setIsConfigured] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [sdkReady, setSdkReady] = useState(false);
 
   useEffect(() => {
-    checkPayPalSetup();
+    initializePayPal();
   }, []);
 
-  const checkPayPalSetup = async () => {
+  const initializePayPal = async () => {
     try {
-      const response = await fetch("/setup");
-      if (response.ok) {
-        const data = await response.json();
-        if (data.clientToken) {
-          setIsConfigured(true);
-          loadPayPalSDK();
-        } else {
-          setError("PayPal not configured");
-        }
-      } else {
-        setError("PayPal not available");
+      // Check if PayPal is already configured
+      const setupResponse = await fetch('/setup');
+      if (!setupResponse.ok) {
+        throw new Error('PayPal not configured');
       }
+
+      setIsPayPalReady(true);
     } catch (error) {
-      setError("PayPal connection failed");
+      console.error('PayPal initialization error:', error);
+      setIsPayPalReady(false);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const loadPayPalSDK = async () => {
-    if (paypalSDKLoaded) {
-      await initPayPal();
-      return;
-    }
-
-    if (paypalSDKLoading) {
-      return;
-    }
-
-    paypalSDKLoading = true;
-
-    try {
-      const script = document.createElement("script");
-      script.src = "https://www.sandbox.paypal.com/web-sdk/v6/core";
-      script.async = true;
-      script.onload = async () => {
-        paypalSDKLoaded = true;
-        paypalSDKLoading = false;
-        await initPayPal();
-      };
-      script.onerror = () => {
-        paypalSDKLoading = false;
-        setError("PayPal SDK failed to load");
-      };
-      document.head.appendChild(script);
-    } catch (error) {
-      paypalSDKLoading = false;
-      setError("PayPal SDK load error");
-    }
-  };
-
-  const initPayPal = async () => {
-    try {
-      const response = await fetch("/setup");
-      const data = await response.json();
-      
-      if (!data.clientToken) {
-        throw new Error("No client token received");
-      }
-
-      const sdkInstance = await (window as any).paypal.createInstance({
-        clientToken: data.clientToken,
-        components: ["paypal-payments"],
-      });
-
-      const paypalCheckout = sdkInstance.createPayPalOneTimePaymentSession({
-        onApprove: async (data: any) => {
-          try {
-            const response = await fetch(`/order/${data.orderId}/capture`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-            });
-            const result = await response.json();
-            console.log("Payment successful:", result);
-            alert("Payment completed successfully! Thank you for enrolling in RoleRaise!");
-          } catch (error) {
-            console.error("Payment capture failed:", error);
-            alert("Payment processing failed. Please try again.");
-          }
-        },
-        onCancel: (data: any) => {
-          console.log("Payment cancelled:", data);
-          alert("Payment was cancelled. You can try again anytime.");
-        },
-        onError: (error: any) => {
-          console.error("PayPal error:", error);
-          alert("Payment error occurred. Please try again.");
-        },
-      });
-
-      // Store the checkout instance for this button
-      (window as any)[`paypalCheckout_${id}`] = paypalCheckout;
-      setSdkReady(true);
-    } catch (error) {
-      console.error("PayPal initialization failed:", error);
-      setError("PayPal initialization failed");
-    }
-  };
-
   const handlePayPalClick = async () => {
     try {
-      const checkout = (window as any)[`paypalCheckout_${id}`];
-      if (!checkout) {
-        throw new Error("PayPal not ready");
+      // Create PayPal order
+      const orderResponse = await fetch('/order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: amount,
+          currency: currency,
+          intent: intent,
+        }),
+      });
+
+      if (!orderResponse.ok) {
+        throw new Error('Failed to create PayPal order');
       }
 
-      // Create order
-      const orderResponse = await fetch("/order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount, currency, intent }),
-      });
-      
-      if (!orderResponse.ok) {
-        throw new Error("Order creation failed");
-      }
-      
       const orderData = await orderResponse.json();
       
-      // Start PayPal checkout
-      await checkout.start(
-        { paymentFlow: "auto" },
-        Promise.resolve({ orderId: orderData.id })
-      );
-      
+      // Redirect to PayPal for payment approval
+      const approveLink = orderData.links.find((link: any) => link.rel === 'approve');
+      if (approveLink) {
+        window.location.href = approveLink.href;
+      } else {
+        throw new Error('No approval link found');
+      }
     } catch (error) {
-      console.error("Payment error:", error);
-      alert("Payment initialization failed. Please try again.");
+      console.error('PayPal payment error:', error);
+      alert('Payment initialization failed. Please try again or contact support.');
     }
   };
 
-  if (isLoading || !sdkReady) {
+  const handleFallbackClick = () => {
+    // Fallback to Calendly booking
+    window.open('https://calendly.com/kohlisahil151991', '_blank');
+  };
+
+  if (isLoading) {
     return (
       <button
-        disabled
-        className="w-full py-3 px-6 bg-gray-300 text-gray-600 font-semibold rounded-lg cursor-not-allowed"
+        onClick={handleFallbackClick}
+        className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
       >
-        {isLoading ? "Loading PayPal..." : "Preparing PayPal..."}
+        Loading...
       </button>
     );
   }
 
-  if (error || !isConfigured) {
+  if (isPayPalReady) {
     return (
       <button
-        onClick={() => alert("PayPal is temporarily unavailable. Please contact support.")}
+        onClick={handlePayPalClick}
         className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
       >
-        Enroll Now - ${parseInt(amount).toLocaleString()}
+        Pay with PayPal - ${parseInt(amount).toLocaleString()}
       </button>
     );
   }
 
   return (
     <button
-      id={id}
-      onClick={handlePayPalClick}
+      onClick={handleFallbackClick}
       className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
     >
       Enroll Now - ${parseInt(amount).toLocaleString()}
